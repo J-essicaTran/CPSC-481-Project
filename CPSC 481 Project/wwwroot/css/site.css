@@ -1,21 +1,10 @@
-@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
-
-html, body {
-    font-family: 'Jost';
-}
-
+/* START OF CSS THAT CAME FROM TEMPLATE */
 h1:focus {
     outline: none;
 }
 
 a, .btn-link {
     color: #0071c1;
-}
-
-.btn-primary {
-    color: #fff;
-    background-color: #1b6ec2;
-    border-color: #1861ac;
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
@@ -66,3 +55,43 @@ a, .btn-link {
     .blazor-error-boundary::after {
         content: "An error has occurred."
     }
+
+/* END OF CSS THAT CAME FROM TEMPLATE - DELETE ABOVE */
+
+html, body {
+    font-family: 'Jost';
+}
+
+/* 
+    DEFAULT BUTTON STYLING START 
+    Ex. <button>Sign In</button>
+*/
+button {
+    background-color: #272a34;
+    border: 0.125rem solid #272a34;
+    border-radius: 3.125rem;
+    font-size: 1.25rem;
+    color: #f2ebe3;
+    padding: 0.438rem 1.594rem;
+}
+
+button:hover {
+    background-color: #ff3f3f;
+    border-color: #ff3f3f;
+}
+
+button:active {
+    background-color: #ff3f3f80;
+    border-color: #ff3f3f80;
+}
+/* DEFAULT BUTTON STYLING END */
+
+/*
+    Use for the smaller sized buttons
+    Ex. <button class="small-button">Read More</button>
+*/
+.small-button {
+    border-width: 0.063rem;
+    font-size: 0.875rem;
+    padding: 0.313rem 0.688rem;
+}
