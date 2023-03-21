@@ -63,6 +63,40 @@ html, body {
     background-color: #f2ebe3;
 }
 
+/* FONT STYLING GUIDE START */
+/*
+    Look to our "Search Item Location" mockup, and understand which tag is used for which string
+
+    <h1>The Fault in Our Stars</h1>
+    <h3>John Green</h3>
+    <p>Book (313 pages, Hardcover)</p>
+
+    <h2>Copies: 3, Available: 0, Hold: 1</h2>
+    <button>Hold</button>
+
+    <h3>Description</h3>
+    <p>Despite the tumor-shrinking medical miracle that has bought her a few years, Hazel has never been ...etc....</p>
+
+    <h2>Readers <i>also</i> liked</h2>
+
+    =========================================================================================================================
+
+    Look to the first mockup in "Pay fines or fees associated with account", and understand which tag is used for which string
+
+    <h1>Account</h1>
+
+    <h2>Tommy Miller</h2>
+    <p>tmiller1981@aol.com</p>
+    <p>202-456-1111</p>
+    <small>Member Since: MM/DD/YYYY</small>
+
+    <h2>Overdue Fees</h2>
+    <h3>Amount: <b>$5.00</b></h3>
+
+*/
+/* FONT STYLING GUIDE END */
+
+
 /* 
     DEFAULT BUTTON STYLING START 
     Ex. <button>Sign In</button>
