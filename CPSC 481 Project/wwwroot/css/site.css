@@ -60,6 +60,7 @@ a, .btn-link {
 
 html, body {
     font-family: 'Jost';
+    background-color: #f2ebe3;
 }
 
 /* 
@@ -84,7 +85,7 @@ button:active {
     background-color: #ff3f3f80;
     border-color: #ff3f3f80;
 }
-/* DEFAULT BUTTON STYLING END */
+/* BUTTON STYLING END */
 
 /*
     Use for the smaller sized buttons
@@ -95,3 +96,5 @@ button:active {
     font-size: 0.875rem;
     padding: 0.313rem 0.688rem;
 }
+
+/* Use to contain */
