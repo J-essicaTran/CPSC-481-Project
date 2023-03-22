@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33502.453
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CPSC 481 Project", "CPSC 481 Project\CPSC 481 Project.csproj", "{6A725DC2-D0D6-42B4-B196-FC0A44E51C87}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CPSC 481 Project", "CPSC 481 Project\CPSC 481 Project.csproj", "{6A725DC2-D0D6-42B4-B196-FC0A44E51C87}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
