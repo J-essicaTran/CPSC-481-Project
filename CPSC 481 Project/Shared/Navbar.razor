@@ -1,26 +1,47 @@
-﻿<nav class="navbar navbar-light mt-2">
+﻿@inject NavigationManager NavigationManager
+
+<nav class="navbar navbar-light mt-2">
     <div class="container-fluid">
         <a class="navbar-brand" href="#"><h2 class="m-0">Hawkins Public Library</h2></a>
         <div class="d-flex">
             <a href="counter">
-                <i class="bi bi-hand-thumbs-up-fill me-4" style="font-size: 2rem;"></i>
+                <i class="bi bi-hand-thumbs-up-fill me-4 nav-icon" style="font-size: 2rem;"></i>
             </a>
             <a href="counter">
-                <i class="bi bi-basket2-fill me-4" style="font-size: 2rem;"></i>
+                <i class="bi bi-basket2-fill me-4 nav-icon" style="font-size: 2rem;"></i>
             </a>
             <a href="counter">
-                <i class="bi bi-question-circle me-4" style="font-size: 2rem;"></i>
+                <i class="bi bi-question-circle me-4 nav-icon" style="font-size: 2rem;"></i>
             </a>
-            <NavLink href="counter">
+            <a href="counter">
                 <button class="me-3">Sign Up</button>
-            </NavLink>
-            <NavLink href="counter">
+            </a>
+            <a href="counter">
                 <button>Login</button>
-            </NavLink>
+            </a>
         </div>
     </div>
 </nav>
 
 @code {
+    //TODO Figure out how to change navbar icon styling when on a page
+    //Ex. when we are on the recommendations page, the recommendations icon is red
 
+    /*
+    string iconStyle;
+    bool temp;
+
+    protected override void OnInitialized()
+    {
+        temp = NavigationManager.Uri.Contains("counter");
+
+        if(NavigationManager.Uri.Contains("/counter"))
+        {
+            iconStyle = "selected-nav-icon";
+        } else
+        {
+            iconStyle = "nav-icon";
+        }
+    }
+    */
 }

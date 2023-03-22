@@ -1,0 +1,24 @@
+﻿.nav-icon {
+    color: #272a34;
+}
+
+.nav-icon:hover {
+    color: #ff3f3f;
+}
+
+.nav-icon:active {
+    color: #ff3f3f80;
+}
+
+.selected-nav-icon {
+    color: #ff3f3f;
+}
+
+.selected-nav-icon:hover {
+    color: #272a34;
+}
+
+.selected-nav-icon:active {
+    color: #272a3480;
+}
+
