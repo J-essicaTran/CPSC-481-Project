@@ -1,27 +1,14 @@
 ﻿@inject NavigationManager NavigationManager
 
-<nav class="navbar navbar-light mt-2">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#"><h2 class="m-0">Hawkins Public Library</h2></a>
-        <div class="d-flex">
-            <a href="counter">
-                <i class="bi bi-hand-thumbs-up-fill me-4 nav-icon" style="font-size: 2rem;"></i>
-            </a>
-            <a href="counter">
-                <i class="bi bi-basket2-fill me-4 nav-icon" style="font-size: 2rem;"></i>
-            </a>
-            <a href="counter">
-                <i class="bi bi-question-circle me-4 nav-icon" style="font-size: 2rem;"></i>
-            </a>
-            <a href="counter">
-                <button class="me-3">Sign Up</button>
-            </a>
-            <a href="counter">
-                <button>Login</button>
-            </a>
-        </div>
-    </div>
-</nav>
+<div class="navbarContainer">
+    <a href="#" class="nav-header"><h2 style="margin: 0;">Hawkins Public Library</h2></a>
+    <div></div>
+    <a href="recommendations"><i class="bi bi-hand-thumbs-up-fill nav-icon"></i></a>
+    <a href="basket"><i class="bi bi-basket2-fill nav-icon"/></a>
+    <a href="help"><i class="bi bi-question-circle nav-icon"/></a>
+    <a href="sign-up"><button>Sign Up</button></a>
+    <button>Login</button>
+</div>
 
 @code {
     //TODO Figure out how to change navbar icon styling when on a page

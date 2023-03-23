@@ -1,4 +1,19 @@
-﻿.nav-icon {
+﻿.navbarContainer {
+    height: fit-content;
+    width: 100%;
+    padding: 0 0 0.5rem 0;
+    display: grid;
+    grid-template-columns: fit-content(100%) auto fit-content(100%) fit-content(100%) fit-content(100%) fit-content(100%) fit-content(100%);
+    gap: 1rem;
+}
+
+.nav-header {
+    color: inherit;
+    text-decoration: none;
+}
+
+.nav-icon {
+    font-size: 2rem;
     color: #272a34;
 }
 
