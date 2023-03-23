@@ -1,0 +1,169 @@
+﻿@page "/search"
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+    <link href="css/site.css" rel="stylesheet" />
+    <link href="css/SearchResults.css" rel="stylesheet" />
+    <link href="CPSC 481 Project.styles.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="favicon.png"/>
+    <link href='https://fonts.googleapis.com/css?family=Jost' rel='stylesheet'/>
+    <link rel="stylesheet" href="~/css/lib/bootstrap-icons/bootstrap-icons.css"/>
+    <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />
+</head>
+<body>
+    <div class="main-grid-container">
+        <div class="left-panel">
+            <h4>Search <span class="search-total">22</span> results for</h4>
+            <div class="filters">
+                <div class="filter-container">
+                    <h5 class="filter-title">Genre</h5>
+                    <input class="filter-search" placeholder="Enter genre"/>
+                    <div class="filter-options">
+                        <div class="filter-checkbox-container">
+                          <input type="checkbox" class="checkbox-input" id="romance" name="romance" value="romance">
+                          <label for="romance">Romance (22)</label>
+                        </div>
+                        <div class="filter-checkbox-container">
+                            <input type="checkbox" class="checkbox-input" id="youngAdult" name="youngAdult" value="youngAdult">
+                            <label for="youngAdult">Young Adult (22)</label>
+                        </div>
+                        <div class="filter-checkbox-container">
+                            <input type="checkbox" class="checkbox-input" id="fiction" name="fiction" value="fiction">
+                            <label for="fiction">Fiction (22)</label>
+                        </div>
+                        <div class="filter-checkbox-container">
+                            <input type="checkbox" class="checkbox-input" id="comingOfAge" name="comingOfAge" value="comingOfAge">
+                            <label for="comingOfAge">Coming of Age (22)</label>
+                        </div>
+                        <div class="filter-checkbox-container">
+                            <input type="checkbox" class="checkbox-input" id="contemporary" name="contemporary" value="contemporary">
+                            <label for="contemporary">Contemporary (22)</label>
+                        </div>
+                    </div>
+                    <button class="small-button">Show More</button>
+                </div>
+                <div class="filter-container">
+                    <h5 class="filter-title">Media</h5>
+                    <input class="filter-search" placeholder="Enter media type" />
+                    <div class="filter-options">
+                        <div class="filter-checkbox-container">
+                            <input type="checkbox" class="checkbox-input" id="book" name="book" value="book">
+                            <label for="book">Book (11)</label>
+                        </div>
+                        <div class="filter-checkbox-container">
+                            <input type="checkbox" class="checkbox-input" id="movie" name="movie" value="movie">
+                            <label for="movie">Movie (5)</label>
+                        </div>
+                        <div class="filter-checkbox-container">
+                            <input type="checkbox" class="checkbox-input" id="audiobook" name="audiobook" value="audiobook">
+                            <label for="audiobook">Audiobook (6)</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-container">
+                    <h5 class="filter-title">Availability</h5>
+                    <div class="filter-options">
+                    <div class="filter-checkbox-container">
+                        <input type="checkbox" class="checkbox-input" id="addToBasket" name="addToBasket" value="addToBasket">
+                        <label for="addToBasket">Add to Basket (14)</label>
+                        </div>
+                        <div class="filter-checkbox-container">
+                            <input type="checkbox" class="checkbox-input" id="hold" name="hold" value="hold">
+                            <label for="hold">Hold Item (8)</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-panel">
+            <div class="search-header">
+                <div class="search-bar-container">
+                    <input class="search-bar" placeholder="the fault in our stars" />
+                </div>
+                <div class="sort">
+                    <label for="sort" class="sort-label">Sort by</label>
+                    <select class="sort-select" id="sort">
+                        <option value="relevance">Relevance</option>
+                        <option value="availableCopies">Available Copies</option>
+                        <option value="mostPopular">Most Popular</option>
+                    </select>
+                </div>
+            </div>
+            <div class="results-container">
+                <div class="item-container">
+                    <div class="item">
+                        <img src="/Images/the-fault-in-our-stars-book.png" />
+                    </div>
+                    <div class="item-info">
+                        <div class="item-header">
+                            <div>
+                                <h3>The Fault in Our Stars</h3>
+                                <h5>John Green</h5>
+                                <h6>Book (313 pages, Hardcover)</h6>
+                            </div>
+                            <button>Add to Basket</button>
+                        </div>
+                        <div class="item-description">
+                            <p>Despite the tumor-shrinking medical miracle that has bought her a few years, Hazel has never been anything but terminal, her final chapter inscribed upon diagnosis. But when a gorgeous plot twist named Augustus Waters suddenly appears at Cancer Kid Support Group, Hazel's story is about to be completely rewritten.</p>
+                        </div>
+                        <div class="item-footer">
+                            <button class="small-button">Read More</button>
+                            <h5>Available Copies: 3</h5>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <div class="item-container">
+                    <div class="item">
+                        <img src="/Images/the-fault-in-our-stars-movie.png" />
+                    </div>
+                    <div class="item-info">
+                        <div class="item-header">
+                            <div>
+                                <h3>The Fault in Our Stars</h3>
+                                <h5>Josh Boone, Shailene Woodley, Ansel Elgort</h5>
+                                <h6>Movie (126 minutes, 4K)</h6>
+                            </div>
+                            <button>Hold</button>
+                        </div>
+                        <div class="item-description">
+                            <p>Despite the tumor-shrinking medical miracle that has bought her a few years, Hazel has never been anything but terminal, her final chapter inscribed upon diagnosis. But when a gorgeous plot twist named Augustus Waters suddenly appears at Cancer Kid Support Group, Hazel's story is about to be completely rewritten.</p>
+                        </div>
+                        <div class="item-footer">
+                            <button class="small-button">Read More</button>
+                            <h5>Available Copies: 0</h5>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <div class="item-container">
+                    <div class="item">
+                        <img src="/Images/the-fault-in-our-stars-book.png" />
+                    </div>
+                    <div class="item-info">
+                        <div class="item-header">
+                            <div>
+                                <h3>The Fault in Our Stars</h3>
+                                <h5>Kate Rudd, John Green, Laura Grafton</h5>
+                                <h6>Audiobook (7 hours and 11 minutes)</h6>
+                            </div>
+                            <button>Add to Basket</button>
+                        </div>
+                        <div class="item-description">
+                            <p>Despite the tumor-shrinking medical miracle that has bought her a few years, Hazel has never been anything but terminal, her final chapter inscribed upon diagnosis. But when a gorgeous plot twist named Augustus Waters suddenly appears at Cancer Kid Support Group, Hazel's story is about to be completely rewritten.</p>
+                        </div>
+                        <div class="item-footer">
+                            <button class="small-button">Read More</button>
+                            <h5>Available Copies: 3</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

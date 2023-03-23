@@ -1,0 +1,115 @@
+﻿.main-grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 2em;
+}
+
+.left-panel {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1.5em;
+    width: fit-content;
+    height: fit-content;
+}
+
+.filter-container {
+    display: grid;
+    justify-items: start;
+    margin-top: 1em;
+}
+
+.filter-options {
+    padding: 0.7em 1em;
+}
+
+.filter-checkbox-container {
+    padding-bottom: 0.4em;
+}
+
+input {
+    border-radius: 50px;
+    border: solid 0.1em #272A34;
+    padding: 0.2em 0.8em;
+    width: 100%
+}
+
+.small-button {
+    font-size: medium;
+    padding: 0.2em 0.8em;
+    margin: 0 auto;
+}
+
+.checkbox-input {
+    width: auto;
+}
+
+.search-total {
+    font-size: larger;
+}
+
+.right-panel {
+    margin-left: 2em;
+}
+
+.search-header {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+}
+
+.results-container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1.5em;
+    margin-top: 1.5em;
+}
+
+img {
+    filter: drop-shadow(-12px 11px 20px #00000050);
+}
+
+.item-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    grid-gap: 1em;
+}
+
+.item-header {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+
+button {
+    width: fit-content;
+    height: fit-content;
+}
+
+h3 {
+    margin-bottom: 0;
+}
+
+.item-footer {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+}
+
+.sort-label {
+    font-size: larger;
+    padding-right: 0.5em;
+}
+
+.sort-select {
+    border-radius: 50px;
+    padding: 0.3em 0.8em;
+    font-size: large;
+    border: solid 0.1em #272A34;
+}
+
+.search-bar {
+    font-size: 22px;
+    padding: 0.3em 1.5em;
+}
