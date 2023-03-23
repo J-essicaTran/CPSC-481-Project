@@ -1,0 +1,12 @@
+﻿@inject IJSRuntime _jsRuntime
+
+<button style="padding: 0 1.4rem; font-size: 2rem;" @onclick="GetBack">
+	<i class="bi bi-chevron-left"></i>
+</button>
+
+@code {
+	private void GetBack()
+	{
+		_jsRuntime.InvokeVoidAsync("history.go", -1);
+	}
+}
