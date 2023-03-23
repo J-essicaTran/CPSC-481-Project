@@ -1,4 +1,4 @@
-﻿.homepageContainer {
+﻿.homepage-container {
     height: 100%;
     width: 100%;
     display: grid;
@@ -6,7 +6,7 @@
     padding: 1rem 2rem 0 2rem;
 }
 
-.homepageSearchbar {
+.homepage-searchbar {
     border-radius: 14px;
     border: 2px solid #272A34;
     border-radius: 50px;
@@ -17,7 +17,7 @@
     font-size: 20px;
 }
 
-.homepageLeftSide {
+.homepage-left-side {
     height: 100%;
     width: 100%;
     padding: 0 3rem 0 2rem;
@@ -25,18 +25,18 @@
     grid-template-rows: 25% fit-content(100%) auto;
 }
 
-.homepageTitle {
+.homepage-title {
     font-size: 60px;
     padding-bottom: 2rem;
     font-family: 'Kyiv Type Titling';
 }
 
-.browseInventoryText {
+.browse-inventory-text {
     color: inherit;
     text-align: center;
 }
 
-.mostBorrowedContainer {
+.most-borrowed-container {
     height: 100%;
     width: 100%;
     background-color: #ffffff;
@@ -47,7 +47,7 @@
     align-items: center;
 }
 
-.mostBorrowedItem {
+.most-borrowed-item {
     height: 650px;
     width: 100%;
     object-fit: contain;
