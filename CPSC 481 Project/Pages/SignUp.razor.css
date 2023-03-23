@@ -1,0 +1,33 @@
+﻿.sign-up-container {
+    height: 100%;
+    width: 100%;
+    padding: 0rem 2rem 0 0.5rem;
+    display: grid;
+    grid-template-rows: fit-content(100%) auto;
+    gap: 1.5rem;
+}
+
+.outer-container {
+    height: 100%;
+    width: 100%;
+    padding: 0 4rem 3rem 5.5rem;
+}
+
+.inner-container {
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 2rem 2rem 3rem 2rem;
+    display: flex;
+}
+
+.sign-up-input {
+    background: #FFFFFF;
+    border: 2px solid #272A34;
+    border-radius: 50px;
+    height: 3.5rem;
+    width: 30rem;
+    padding-left: 1.813rem;
+}
+
