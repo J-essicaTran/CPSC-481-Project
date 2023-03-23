@@ -51,4 +51,7 @@
     height: 650px;
     width: 100%;
     object-fit: contain;
+    filter: brightness(120%);
+    filter: contrast(120%);
+    filter: drop-shadow(-0.25rem 0.25rem 0.75rem black);
 }
