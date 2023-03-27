@@ -1,12 +1,12 @@
-﻿.outer-order-summary-container {
-    padding: 0 0 0 0.5rem;
+﻿.order-summary-container {
+    margin-top: 4%;
+    /*margin-top: 50px;*/
 }
 
 .title {
     align-items: center;
     display: flex;
-    flex-direction: row;
-    margin: 0 0 0 105px;
+    justify-content: center;
 }
 
 .list-icon {
