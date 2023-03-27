@@ -9,6 +9,11 @@
     padding-bottom: 1rem;
 }
 
+.retake-quiz {
+    text-align: center;
+    color: inherit;
+}
+
 .item-container {
     align-items: center;
     display: flex;
