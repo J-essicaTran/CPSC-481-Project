@@ -24,6 +24,9 @@
     height: 220px;
     width: 138px;
     margin: 0 20px 0 20px;
+    filter: brightness(120%);
+    filter: contrast(120%);
+    filter: drop-shadow(-0.25rem 0.25rem 0.25rem #b1b1b1);
 }
 
 .item-info {
