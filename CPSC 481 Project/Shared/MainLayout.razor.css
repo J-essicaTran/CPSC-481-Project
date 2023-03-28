@@ -1,5 +1,5 @@
-.page-container {
-    width: 100%;
+.pageContainer {
+    width: 100vw;
     height: 100vh;
     display: grid;
     grid-template-rows: fit-content(100%) auto;
@@ -7,7 +7,7 @@
     padding: 1rem 1rem 0 1rem;
 }
 
-.body-container {
+.bodyContainer {
     height: 100%;
     width: 100%;
 }
