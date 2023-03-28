@@ -1,0 +1,48 @@
+﻿.order-summary-container {
+    margin-top: 4%;
+    /*margin-top: 50px;*/
+}
+
+.title {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.list-icon {
+    font-size: 40px;
+}
+
+.page-title {
+    padding: 0 0 0 10px;
+    margin: 0;
+}
+
+.order-summary {
+    margin: auto;
+    margin-bottom: 50px;
+    height: 502px;
+    width: 1156px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 40px;
+}
+
+.order-info {
+    align-items: center;
+}
+
+.message {
+    padding: 20px;
+    color: #ffffff;
+}
+
+.order-message {
+    margin: auto;
+    margin-top: 130px;
+    height: 89px;
+    width: 650px;
+    text-align: center;
+    background-color: #87B54F;
+    border-radius: 10px;
+}
