@@ -53,8 +53,9 @@ input {
 
 .search-header {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr auto;
     justify-content: space-between;
+    grid-gap: 1em;
 }
 
 .results-container {
@@ -112,4 +113,12 @@ h3 {
 .search-bar {
     font-size: 22px;
     padding: 0.3em 1.5em;
+}
+
+.search-icon {
+    float: right;
+    margin-right: 20px;
+    margin-top: -40px;
+    position: relative;
+    z-index: 2;
 }
