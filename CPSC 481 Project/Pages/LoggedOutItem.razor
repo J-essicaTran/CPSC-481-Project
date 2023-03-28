@@ -1,4 +1,4 @@
-@page "/loggedOutItem"
+@page "/item/{item_name}"
 
 <div class="item-page-container">
     <div class="item1">
@@ -14,8 +14,9 @@
                 </div>
                 <div class="book-content">
                     <div class="top-part">
-                        <p style="font-size: 20px;padding:0;margin-left:100px;margin-top:20px;text-align:center;">Copies: 3, Available: 0, Hold: 1</p>
-                        <button style="margin-left:50px;height:fit-content;">Hold</button>
+                        <div/>
+                        <h3 style="margin:auto 0;">Copies: 3, Available: 0, Hold: 1</h3>
+                        <button style="margin:auto 0;">Hold</button>
                     </div>
                     <br>
                     <hr style="margin: 0 20px 0 375px;color:#d3c2ae;height:2px;">
@@ -69,4 +70,7 @@
 
 @code {
 	//<input type="text" class="homepageSearchbar" />
+
+    [Parameter]  
+    public string item_name { get; set; } 
 }
