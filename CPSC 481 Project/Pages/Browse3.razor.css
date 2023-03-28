@@ -1,0 +1,64 @@
+﻿.outer-container {
+    padding: 0 0 0 0.5rem;
+}
+
+.inner-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.quiz-container {
+    display: flex;
+}
+
+.left-panel {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 738px;
+    border-radius: 10px 0px 0px 10px;
+    padding: 30px 0;
+    background-color: #ffffff;
+}
+
+.quiz-title {
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Kyiv Type Titling';
+}
+
+.option-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0 0 0;
+}
+
+.option {
+    /*    display: block;
+    position: relative;*/
+    min-width: 366px;
+    border-radius: 10px 10px 10px 10px;
+    background-color: #F2EBE3;
+    margin: 0 0 15px 0;
+    font-size: 25px;
+    padding-left: 10px;
+}
+
+    .option input {
+        height: 20px;
+        width: 20px;
+        cursor: pointer;
+    }
+
+.next-button {
+    margin: 20px 0 0 0;
+}
+
+.image {
+    height: 500px;
+    width: 418px;
+    border-radius: 0px 10px 10px 0px;
+}

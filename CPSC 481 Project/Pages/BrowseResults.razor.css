@@ -1,0 +1,45 @@
+﻿.browse-results-container {
+    width: 100%;
+    height: 100%;
+}
+
+.browse-results-title {
+    margin: 0;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.retake-quiz {
+    text-align: center;
+    color: inherit;
+}
+
+.item-container {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: 260px;
+    width: 590px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.image {
+    height: 220px;
+    width: 138px;
+    margin: 0 20px 0 20px;
+    filter: brightness(120%);
+    filter: contrast(120%);
+    filter: drop-shadow(-0.25rem 0.25rem 0.25rem #b1b1b1);
+}
+
+.item-info {
+    padding: 0 20px 0 0;
+}
+
+.add-to-basket-button {
+
+    float: right;
+}
+
