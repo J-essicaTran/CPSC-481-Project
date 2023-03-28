@@ -30,9 +30,9 @@
     font-family: 'Kyiv Type Titling';
 }
 
-.browse-inventory-text {
-    color: inherit;
+.quiz-prompt {
     text-align: center;
+    color: inherit;
 }
 
 .most-borrowed-container {
