@@ -1,0 +1,31 @@
+@page "/account"
+@using Microsoft.AspNetCore.Components.Web
+@inherits LayoutComponentBase
+
+<div class="Account-header">
+    @* <img class="icon" src="/Images/icon.jpg" /> *@
+    <h1 class="account-title">&nbspAccount</h1>
+
+</div>
+<div class="Account-container">
+    <div class="Account-left-side">
+        <div class="account-info">
+            <h2>Account Information</h2>
+            <img class="skull" src="/Images/skull.jpg" />
+            <div>John Doe</div>
+            <div>Email: john.doe@example.com</div>
+            <div>Phone: +1 (123) 456-7890</div>
+            <br>
+            <button>Edit Information</button>
+
+        </div>
+    </div>
+    <div class="Overdue-container">
+        <h2>Overdue Fees</h2>
+        <img class="checkmark" src="/Images/checkmark.jpg" />
+        <div class="fee-amount">$15.00</div>
+
+        <button>More Info</button>
+
+    </div>
+</div>
