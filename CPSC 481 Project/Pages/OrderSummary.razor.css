@@ -1,16 +1,16 @@
 ﻿.order-summary-container {
-    margin-top: 4%;
-    /*margin-top: 50px;*/
+    width: fit-content;
+    margin: 4% auto;
 }
 
 .title {
     align-items: center;
     display: flex;
-    justify-content: center;
 }
 
 .list-icon {
     font-size: 40px;
+    color: #BEAF98;
 }
 
 .page-title {
@@ -19,7 +19,6 @@
 }
 
 .order-summary {
-    margin: auto;
     margin-bottom: 50px;
     height: 502px;
     width: 1156px;
