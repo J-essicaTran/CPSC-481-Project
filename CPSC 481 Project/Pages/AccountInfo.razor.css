@@ -1,0 +1,57 @@
+﻿.outer-container {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: fit-content(100%) auto;
+}
+
+.backbtn-container {
+    padding: 0 0 0 0.5rem;
+}
+
+.hidden-back-btn {
+    visibility: hidden
+}
+
+.middle-container {
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: fit-content(100%) auto;
+}
+
+.title-container {
+    display: grid;
+    grid-template-columns: fit-content(100%) auto;
+    gap: 2rem;
+}
+
+.title {
+    align-items: center;
+    display: flex;
+}
+
+.account-icon {
+    font-size: 48px;
+    color: #BEAF98;
+}
+
+.page-title {
+    padding: 0 0 0 10px;
+    margin: 5px 0 0 0;
+}
+
+.inner-container {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: fit-content(100%) auto auto fit-content(100%);
+    gap: 2rem;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    background-color: blue;
+}
