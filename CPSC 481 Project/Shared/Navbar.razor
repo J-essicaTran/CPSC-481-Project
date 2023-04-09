@@ -1,16 +1,104 @@
 ﻿@inject NavigationManager NavigationManager
 
-<div class="navbar-container">
+<div class="navbar-container" style="display:@loggedOutNavBar">
     <a href="#" class="nav-header"><h2 style="margin: 0;">Hawkins Public Library</h2></a>
     <div></div>
     <a href="recommendations"><i class="bi bi-hand-thumbs-up-fill nav-icon"></i></a>
     <a href="basket"><i class="bi bi-basket2-fill nav-icon"/></a>
     <a href="help"><i class="bi bi-question-circle nav-icon"/></a>
     <a href="sign-up"><button>Sign Up</button></a>
-    <button>Login</button>
+    <button @onclick="ShowLogin">Login</button>
+    <div class="login-popup" style="display:@loginDisplay">
+        <input id="email" placeholder="E-mail"/>
+        <input id="password" type="password" placeholder="Password"/>
+        <button class="login-form-button" @onclick="Login">Login</button>
+    </div>
+    <div class="triangle-border" style="display:@loginDisplay"></div>
+    <div class="triangle" style="display:@loginDisplay"></div>
+    <div class="login-successful" style="display:@logoutSuccessful">
+        <p class="login-status">Successfully logged out</p>
+        <svg @onclick="CloseSuccessStatus" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+        </svg>
+    </div>
+</div>
+<div class="navbar-container" style="display:@loggedInNavBar">
+    <a href="#" class="nav-header"><h2 style="margin: 0;">Hawkins Public Library</h2></a>
+    <div></div>
+    <a href="recommendations"><i class="bi bi-hand-thumbs-up-fill nav-icon"></i></a>
+    <a href="basket"><i class="bi bi-basket2-fill nav-icon" /></a>
+    <a href="borrowed"><i class="bi bi-book-half nav-icon"></i></a>
+    <a href="help"><i class="bi bi-question-circle nav-icon" /></a>
+    <i @onclick="ShowAccountInfo" class="bi bi-person-circle nav-icon"></i>
+    <div class="account-info-popup" style="display:@accountInfoDisplay">
+        <a href="account"><p>Account Info.</p></a>
+        <hr />
+        <p @onclick="Logout">Logout</p>
+    </div>
+    <div class="triangle-border-account" style="display:@accountInfoDisplay"></div>
+    <div class="triangle-account" style="display:@accountInfoDisplay"></div>
+    <div class="login-successful" style="display:@loginSuccessful">
+        <p class="login-status">Successfully logged in</p>
+        <svg @onclick="CloseSuccessStatus" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+        </svg>
+    </div>
 </div>
 
 @code {
+    string loginDisplay = "none";
+    string loginSuccessful = "none";
+    string loggedInNavBar = "none";
+    string loggedOutNavBar = "grid";
+    string accountInfoDisplay = "none";
+    string logoutSuccessful = "none";
+
+    private void ShowLogin()
+    {
+        if(loginDisplay == "none")
+        {
+            loginDisplay = "block";
+        }
+        else
+        {
+            loginDisplay = "none";
+        }
+    }
+
+    private void ShowAccountInfo()
+    {
+        if (accountInfoDisplay == "none")
+        {
+            accountInfoDisplay = "block";
+        }
+        else
+        {
+            accountInfoDisplay = "none";
+        }
+    }
+
+    private void Login()
+    {
+        loginDisplay = "none";
+        loginSuccessful = "flex";
+        loggedInNavBar = "grid";
+        loggedOutNavBar = "none";
+    }
+
+    private void Logout()
+    {
+        accountInfoDisplay = "none";
+        logoutSuccessful = "flex";
+        loggedInNavBar = "none";
+        loggedOutNavBar = "grid";
+
+    }
+
+    private void CloseSuccessStatus()
+    {
+        loginSuccessful = "none";
+        logoutSuccessful = "none";
+    }
     //TODO Figure out how to change navbar icon styling when on a page
     //Ex. when we are on the recommendations page, the recommendations icon is red
 

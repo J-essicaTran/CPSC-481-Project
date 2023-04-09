@@ -1,0 +1,44 @@
+﻿outer-no-overdue-fees-container {
+    padding: 0 0 0 0.5rem;
+}
+
+.inner-no-overdue-fees-container {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.title {
+    align-items: center;
+    display: flex;
+}
+
+.money-icon {
+    font-size: 40px;
+    color: #BEAF98;
+}
+
+.page-title {
+    padding: 0 0 0 2px;
+    margin: 5px 0 0 0;
+}
+
+.no-overdue-fees {
+    margin: auto;
+    margin-bottom: 50px;
+    height: 500px;
+    width: 1156px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 150px 0 0 0;
+}
+
+.message {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.smile-icon {
+    font-size: 90px;
+    color: #BEAF98; 
+}
