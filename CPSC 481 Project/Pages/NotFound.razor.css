@@ -85,12 +85,13 @@
 
 .search-icon {
     float: right;
-    margin-top: -26px;
+    margin-right: 8px;
+    margin-top: -44px;
     position: relative;
     z-index: 2;
-    margin-right: -2.5px;
-    padding: 5px 10px 5px 10px;
+    display: block;
 }
+
 
 input {
     width: 100%
@@ -104,7 +105,14 @@ input {
     
 }
 
+.search-button {
+    width: fit-content;
+    height: fit-content;
+    padding: 0 0.5em 0.2em 0.5em;
+}
+
+
 .search-bar-container {
-    width: 60%;
+    width: 75%;
 }
 
