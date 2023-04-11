@@ -118,6 +118,11 @@ button:active {
     background-color: #ff3f3f80;
     border-color: #ff3f3f80;
 }
+
+button:disabled {
+    background-color: #272a34;
+    border-color: #272a34;
+}
 /* BUTTON STYLING END */
 
 /*
