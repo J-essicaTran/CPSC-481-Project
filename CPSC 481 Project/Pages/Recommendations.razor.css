@@ -41,6 +41,9 @@
     width: 100%;
     object-fit: contain;
     aspect-ratio: 0.65;
+    filter: brightness(120%);
+    filter: contrast(120%);
+    filter: drop-shadow(-0.25rem 0.25rem 0.25rem #b1b1b1);
 }
 
 .td-title {
