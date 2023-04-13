@@ -120,6 +120,21 @@ button:active {
 }
 /* BUTTON STYLING END */
 
+.secondary-button {
+    background-color: transparent;
+    color: #272a34;
+}
+
+.secondary-button:hover {
+    background-color: #ff3f3f80;
+    border-color: #272a34;
+}
+
+.secondary-button:active {
+    background-color: #ff3f3f;
+    color: white;
+}
+
 /*
     Use for the smaller sized buttons
     Ex. <button class="small-button">Read More</button>
