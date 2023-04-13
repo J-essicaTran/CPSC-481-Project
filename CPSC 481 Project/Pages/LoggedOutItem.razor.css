@@ -40,7 +40,7 @@ h3 {
     width: 100%;
     filter: brightness(120%);
     filter: contrast(120%);
-    filter: drop-shadow(-0.25rem 0.25rem 0.75rem black);
+    filter: drop-shadow(-0.25rem 0.25rem 0.25rem #b1b1b1);
     padding: 1.875rem 0 0 0;
 }
 
