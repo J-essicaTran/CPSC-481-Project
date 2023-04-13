@@ -1,0 +1,53 @@
+﻿@page "/borrowed"
+
+<div class="container">
+    <div class="tabs">
+        <button class="header-button" @onclick="UpdateDisplay" style="@borrowedButtonShadow">Borrowed Items</button>
+        <button class="header-button" @onclick="UpdateDisplay" style="@heldButtonShadow">Held Items</button>
+    </div>
+    <div class="item-list" id="borrowed-items" style="@borrowedItemsDisplay">
+        <div class="item-container">
+            <div>
+                <h4>Item Title</h4>
+                <p>Author</p>
+            </div>
+            <p>Due in: 2 Days</p>
+            <button>Renew</button>
+        </div>
+    </div>
+    <div class="item-list" id="held-items" style="@heldItemsDisplay">
+        <div class="item-container">
+            <div>
+                <h4>Item Title</h4>
+                <p>Author</p>
+            </div>
+            <p>Place: 2</p>
+            <button>Remove</button>
+        </div>
+    </div>
+</div>
+
+@code {
+    private String heldItemsDisplay = "display: none;";
+    private String heldButtonShadow = "box-shadow: inset 10px -10px 15px 0px #a6a19c38;";
+    private String borrowedButtonShadow = "";
+    private String borrowedItemsDisplay = "";
+
+    private void UpdateDisplay()
+    {
+        if (heldItemsDisplay == "display: none;")
+        {
+            heldItemsDisplay = "";
+            heldButtonShadow = "";
+            borrowedItemsDisplay = "display: none;";
+            borrowedButtonShadow = "box-shadow: inset -10px -10px 15px 0px #a6a19c38;";
+        }
+        else
+        {
+            heldItemsDisplay = "display: none;";
+            heldButtonShadow = "box-shadow: inset 10px -10px 15px 0px #a6a19c38;";
+            borrowedItemsDisplay = "";
+            borrowedButtonShadow = "";
+        }
+    }
+}
