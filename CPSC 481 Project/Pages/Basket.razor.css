@@ -19,7 +19,7 @@
 
 .checkout-summary {
     margin: auto;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     height: 100%;
     width: 1156px;
     background-color: #ffffff;
@@ -34,7 +34,7 @@
 }
 
 .image {
-    height: 158px;
+    height: 170px;
     width: 120px;
     margin: 25px 25px 25px 0;
     filter: brightness(120%);
