@@ -3,8 +3,14 @@
 <PageTitle>Hawkins Public Library</PageTitle>
 
 <div class="page-container">
+    <CascadingValue Value="@userStatus">
     <Navbar />
     <div class="body-container">
         @Body
     </div>
+    </CascadingValue>
 </div>
+
+@code {
+    private bool userStatus = false;
+}
