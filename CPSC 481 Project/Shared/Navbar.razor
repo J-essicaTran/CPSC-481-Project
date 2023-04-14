@@ -3,9 +3,9 @@
 <div class="navbar-container" style="display:@loggedOutNavBar">
     <a href="#" class="nav-header"><h2 style="margin: 0;">Hawkins Public Library</h2></a>
     <div></div>
-    <a href="recommendations"><i class="bi bi-hand-thumbs-up-fill nav-icon"></i></a>
-    <a href="basket"><i class="bi bi-basket2-fill nav-icon"/></a>
-    <a href="help"><i class="bi bi-question-circle nav-icon"/></a>
+    <a href="recommendations"><CPSC_481_Project.Pages.Tooltip Text="<b>Reccomendations</b>"><i class="bi bi-hand-thumbs-up-fill nav-icon"></i></CPSC_481_Project.Pages.Tooltip></a>
+    <a href="basket"><CPSC_481_Project.Pages.Tooltip Text="<b>Basket</b>"><i class="bi bi-basket2-fill nav-icon"/></CPSC_481_Project.Pages.Tooltip></a>
+    <a href="help"><CPSC_481_Project.Pages.Tooltip Text="<b>Help</b>"><i class="bi bi-question-circle nav-icon"/></CPSC_481_Project.Pages.Tooltip></a>
     <a href="sign-up"><button>Sign Up</button></a>
     <button @onclick="ShowLogin">Login</button>
     <div class="login-popup" style="display:@loginDisplay">
@@ -25,11 +25,11 @@
 <div class="navbar-container" style="display:@loggedInNavBar">
     <a href="#" class="nav-header"><h2 style="margin: 0;">Hawkins Public Library</h2></a>
     <div></div>
-    <a href="recommendations"><i class="bi bi-hand-thumbs-up-fill nav-icon"></i></a>
-    <a href="basket"><i class="bi bi-basket2-fill nav-icon" /></a>
-    <a href="borrowed"><i class="bi bi-book-half nav-icon"></i></a>
-    <a href="help"><i class="bi bi-question-circle nav-icon" /></a>
-    <i @onclick="ShowAccountInfo" class="bi bi-person-circle nav-icon"></i>
+    <a href="recommendations"><CPSC_481_Project.Pages.Tooltip Text="<b>Reccomendations</b>"><i class="bi bi-hand-thumbs-up-fill nav-icon"></i></CPSC_481_Project.Pages.Tooltip></a>
+    <a href="basket"><CPSC_481_Project.Pages.Tooltip Text="<b>Basket</b>"><i class="bi bi-basket2-fill nav-icon" /></CPSC_481_Project.Pages.Tooltip></a>
+    <a href="borrowed"><CPSC_481_Project.Pages.Tooltip Text="<b>Borrowed and Held Items</b>"><i class="bi bi-book-half nav-icon"></i></CPSC_481_Project.Pages.Tooltip></a>
+    <a href="help"><CPSC_481_Project.Pages.Tooltip Text="<b>Help</b>"><i class="bi bi-question-circle nav-icon" /></CPSC_481_Project.Pages.Tooltip></a>
+    <CPSC_481_Project.Pages.Tooltip Text="<b>Account</b>"><i @onclick="ShowAccountInfo" class="bi bi-person-circle nav-icon"></i></CPSC_481_Project.Pages.Tooltip>
     <div class="account-info-popup" style="display:@accountInfoDisplay">
         <a href="account"><p>Account Info.</p></a>
         <hr />
