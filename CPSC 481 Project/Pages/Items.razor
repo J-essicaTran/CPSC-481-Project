@@ -1,0 +1,74 @@
+﻿@page "/items"
+
+<PageTitle>Items | Hawkins Public Library</PageTitle>
+
+@if (isBorrowedItems)
+{
+	<div class="outer-container">
+		<div class="tab-container">
+			<div class="tab" @onclick='() => {SwitchTab("borrowed");}'>
+				<h3 class="tab-text">Borrowed Items</h3>
+			</div>
+			<div class="disabled-tab" @onclick='() => {SwitchTab("held");}'>
+				<h3 class="tab-text">Held Items</h3>
+			</div>
+		</div>
+		<div class="content-container">
+			<h2 style="margin: 0">The Martian</h2>
+			<h5>Mike Weir</h5>
+			<div class="item-subinfo">
+				<h4>Due In: <b style="color: #ff3f3f;">2 Days</b></h4>
+				<button class="@(isRenewed1 ? "renewed-button" : "")" @onclick=RenewBook1 disabled="@isRenewed1">@(isRenewed1 ? "Renewed" : "Renew")</button>
+			</div>
+			<hr />
+			<h2 style="margin: 0">The Return of the King</h2>
+			<h5>J.R.R Tolkien</h5>
+			<div class="item-subinfo">
+				<h4>Due In: <b>10 Days</b></h4>
+				<button class="@(isRenewed2 ? "renewed-button" : "")" @onclick=RenewBook2 disabled="@isRenewed2">@(isRenewed2 ? "Renewed" : "Renew")</button>
+			</div>
+		</div>
+	</div>
+}
+else
+{
+	<div class="outer-container">
+		<div class="tab-container">
+			<div class="disabled-tab" @onclick='() => {SwitchTab("borrowed");}'>
+				<h3 class="tab-text">Borrowed Items</h3>
+			</div>
+			<div class="tab" @onclick='() => {SwitchTab("held");}'>
+				<h3 class="tab-text">Held Items</h3>
+			</div>
+		</div>
+		<div class="content-container" style="display: flex; justify-content: center; align-items: center;">
+			<h3 style="margin: 0;">Nothing here!</h3>
+		</div>
+	</div>
+}
+
+@code {
+	private bool isRenewed1 = false;
+	private bool isRenewed2 = false;
+	private bool isBorrowedItems = true;
+
+	private void RenewBook1()
+	{
+		isRenewed1 = true;
+	}
+	private void RenewBook2()
+	{
+		isRenewed2 = true;
+	}
+	private void SwitchTab(string tabName)
+	{
+		if(tabName == "borrowed")
+		{
+			isBorrowedItems = true;
+		}
+		else
+		{
+			isBorrowedItems = false;
+		}
+	}
+}
