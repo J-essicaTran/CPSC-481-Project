@@ -22,7 +22,7 @@
             var message = document.getElementById("actionSuccessful");
             var loggedInNavbar = document.getElementById("loggedInNavBar");
 
-            if (loggedInNavbar.style.display == "none") {
+            if (loggedInNavbar.style.display == "none" || loggedInNavbar.style.display == "") {
                 message.style.display = "flex";
             }
             else {
