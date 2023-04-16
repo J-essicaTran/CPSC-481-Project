@@ -27,12 +27,12 @@
 				<h5>Gavin Hood</h5>
 				<div class="item-subinfo">
 					<h4>Due In: <b>@(isRenewed2 ? "9 Days" : "2 Days")</b></h4>
-					<button class="@(isRenewed2 ? "renewed-button" : "")" @onclick=RenewBook2 disabled="@isRenewed2">@(isRenewed2 ? "Renewed" : "Renew")</button>
+					<button class="@(isRenewed2 ? "renewed-button" : "")" @onclick=RenewBook2 disabled=true>@(isRenewed2 ? "Renewed" : "Renew")</button>
 				</div>
 			</div>
 		</div>
-		<div class="@(isRenewed2 ? "borrowed-warning-container-on" : "borrowed-warning-container-off")">
-			<h5 style="margin: 0;">Please be advised that once you renew an item, <b>it will only be renewed once.</b> When the new due date arrives, you will be required to return the item promptly or you may be subject to late fees or penalties.</h5>
+		<div class="borrowed-warning-container-on">
+			<h5 style="margin: 0;">Please return any overdue items and pay the associated fees at the <b>Hawkins Public Library</b>. For more information about your overdue fees, <a href="/account" style="color: white;">click here.</a></h5>
 		</div>
 	</div>
 }
@@ -60,7 +60,7 @@ else
 			</div>
 		</div>
 		<div class="borrowed-warning-container-off">
-			<h5 style="margin: 0;">Please be advised that once you renew an item, <b>it will only be renewed once.</b> When the new due date arrives, you will be required to return the item promptly or you may be subject to late fees or penalties.</h5>
+			<h5 style="margin: 0;">Please return any overdue items and pay the associated fees at the <b>Hawkins Public Library</b>. For more information about your overdue fees, <a>click here.</a></h5>
 		</div>
 	</div>
 }

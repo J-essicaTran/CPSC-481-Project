@@ -3,7 +3,6 @@
     width: 100%;
     display: grid;
     grid-template-rows: auto fit-content(100%) auto;
-    gap: 2rem;
 }
 
 .items-content-container {
