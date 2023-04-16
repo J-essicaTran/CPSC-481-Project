@@ -7,14 +7,14 @@
              <td class="td-outer-container">
                  <div class="td-container">
                      <div class="td-image-outer-container">
-                         <button class="small-button td-image-button">Add To Basket</button>
+                         <button class="small-button td-image-button @(isRenewed1 ? "renewed-button" : "")" @onclick="hold">@submit</button>
                          <div class="td-image-container">
-                             <img class="td-image" src="/Images/world-travel.jpg" />
+                             <img class="td-image" src="/Images/the-martian-movie.jpg" />
                          </div>
                      </div>
-                     <h3 class="td-title">World Travel</h3>
-                     <h4 class="td-author">Anthony Bourdain</h4>
-                     <p>A guide to some of the world’s most fascinating places, as seen and experienced by writer, television host, and relentlessly curious traveler Anth...</p>
+                     <h3 class="td-title">The Martian</h3>
+                     <h4 class="td-author">Ridley Scott</h4>
+                     <p>When astronauts blast off from the planet Mars, they leave behind Mark Watney (Matt Damon), presumed dead after a fierce storm. With only a meager...</p>
                      <div class="td-button-container"><div/><button class="small-button">Read More</button></div>
                 </div>
              </td>
@@ -122,6 +122,14 @@
      </table>
 </div>
 
+
 @code {
-  
+    private string submit = "Hold";
+    private bool isRenewed1 = false;
+
+    private void hold()
+    {
+        isRenewed1 = true;
+        submit = "Held ✓";
+    }
 }
