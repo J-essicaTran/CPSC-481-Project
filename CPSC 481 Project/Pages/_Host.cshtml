@@ -47,6 +47,26 @@
                 loggedOutNavbar.style.display = "grid";
             }
         }
+        function updateSignUpStatus() {
+            var status = document.getElementById("signUpSuccessful");
+
+            if (status.style.display == "none" || status.style.display == "") {
+                status.style.display = "flex";
+            }
+            else {
+                status.style.display = "none";
+            }
+        }
+        function updateEditStatus() {
+            var status = document.getElementById("editSuccessful");
+
+            if (status.style.display == "none" || status.style.display == "") {
+                status.style.display = "flex";
+            }
+            else {
+                status.style.display = "none";
+            }
+        }
     </script>
 </head>
 <body>
