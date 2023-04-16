@@ -85,7 +85,7 @@ h3 {
     width: 100%;
     background-color: #ffffff;
     border-radius: 10px 10px 10px 10px;
-    padding: 1.875rem 0 5rem 0;
+    padding: 1.875rem 0 0 0;
     grid-template-rows: 20% 80%;
 }
 
@@ -109,5 +109,23 @@ h3 {
     object-fit: cover;
 }
 
+.added-button {
+    background-color: #87B54F;
+    border-color: #87B54F;
+}
 
+.column-container {
+    display: flex;
+    flex-wrap: wrap;
+}
 
+.column {
+    flex: 1;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+  
+  
+  

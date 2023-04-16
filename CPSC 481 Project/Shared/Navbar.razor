@@ -4,9 +4,9 @@
 <div id="loggedOutNavBar" class="navbar-container">
     <a href="#" class="nav-header"><h2 style="margin: 0;">Hawkins Public Library</h2></a>
     <div></div>
-    <a href="recommendations"><i class="bi bi-hand-thumbs-up-fill nav-icon"></i></a>
-    <a href="basket"><i class="bi bi-basket2-fill nav-icon"/></a>
-    <a href="help"><i class="bi bi-question-circle nav-icon"/></a>
+    <a href="recommendations"><CPSC_481_Project.Pages.Tooltip Text="<b>Recommendations</b>"><i class="bi bi-hand-thumbs-up-fill nav-icon"></i></CPSC_481_Project.Pages.Tooltip></a>
+    <a href="basket"><CPSC_481_Project.Pages.Tooltip Text="<b>Basket</b>"><i class="bi bi-basket2-fill nav-icon"/></CPSC_481_Project.Pages.Tooltip></a>
+    <a href="help"><CPSC_481_Project.Pages.Tooltip Text="<b>Help</b>"><i class="bi bi-question-circle nav-icon"/></CPSC_481_Project.Pages.Tooltip></a>
     <a href="sign-up"><button>Sign Up</button></a>
     <button @onclick="ShowLogin">Login</button>
     <div class="login-popup" style="display:@loginDisplay">
@@ -26,11 +26,11 @@
 <div id="loggedInNavBar" class="navbar-container">
     <a href="#" class="nav-header"><h2 style="margin: 0;">Hawkins Public Library</h2></a>
     <div></div>
-    <a href="recommendations"><i class="bi bi-hand-thumbs-up-fill nav-icon"></i></a>
-    <a href="basket"><i class="bi bi-basket2-fill nav-icon" /></a>
-    <a href="items"><i class="bi bi-book-half nav-icon"></i></a>
-    <a href="help"><i class="bi bi-question-circle nav-icon" /></a>
-    <i @onclick="ShowAccountInfo" class="bi bi-person-circle nav-icon"></i>
+    <a href="recommendations"><CPSC_481_Project.Pages.Tooltip Text="<b>Recommendations</b>"><i class="bi bi-hand-thumbs-up-fill nav-icon"></i></CPSC_481_Project.Pages.Tooltip></a>
+    <a href="basket"><CPSC_481_Project.Pages.Tooltip Text="<b>Basket</b>"><i class="bi bi-basket2-fill nav-icon" /></CPSC_481_Project.Pages.Tooltip></a>
+    <a href="items"><CPSC_481_Project.Pages.Tooltip Text="<b>Borrowed and Held Items</b>"><i class="bi bi-book-half nav-icon"></i></CPSC_481_Project.Pages.Tooltip></a>
+    <a href="help"><CPSC_481_Project.Pages.Tooltip Text="<b>Help</b>"><i class="bi bi-question-circle nav-icon" /></CPSC_481_Project.Pages.Tooltip></a>
+    <CPSC_481_Project.Pages.Tooltip Text="<b>Account</b>"><i @onclick="ShowAccountInfo" class="bi bi-person-circle nav-icon"></i></CPSC_481_Project.Pages.Tooltip>
     <div class="account-info-popup" style="display:@accountInfoDisplay">
         <a href="account"><p @onclick="ShowAccountInfo">Account Info.</p></a>
         <hr />
@@ -41,6 +41,18 @@
     <div class="login-successful" style="display:@loginSuccessful">
         <p class="login-status">Successfully logged in</p>
         <svg @onclick="CloseSuccessStatus" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+        </svg>
+    </div>
+    <div class="login-successful" id="signUpSuccessful">
+        <p class="login-status">Successfully signed up</p>
+        <svg @onclick="CloseSignUpStatus" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+        </svg>
+    </div>
+    <div class="login-successful" id="editSuccessful">
+        <p class="login-status">Successfully updated account</p>
+        <svg @onclick="CloseEditStatus" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
             <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
         </svg>
     </div>
@@ -105,5 +117,15 @@
     {
         loginSuccessful = "none";
         logoutSuccessful = "none";
+    }
+
+    private void CloseSignUpStatus()
+    {
+        JsRuntime.InvokeVoidAsync("updateSignUpStatus");
+    }
+
+    private void CloseEditStatus()
+    {
+        JsRuntime.InvokeVoidAsync("updateEditStatus");
     }
 }
