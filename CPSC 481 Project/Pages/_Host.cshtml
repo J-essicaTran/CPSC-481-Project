@@ -47,6 +47,23 @@
                 loggedOutNavbar.style.display = "grid";
             }
         }
+        function updateNotification() {
+            var notification1 = document.getElementById("notificationBasket1");
+            var notification2 = document.getElementById("notificationBasket2");
+            
+            if (notification1.style.display == "none" || notification1.style.display == "") {
+                notification1.style.display = "block";
+            }
+            else {
+                notification1.style.display = "none";
+            }
+            if (notification2.style.display == "none" || notification2.style.display == "") {
+                notification2.style.display = "block";
+            }
+            else {
+                notification2.style.display = "none";
+            }
+        }
     </script>
 </head>
 <body>

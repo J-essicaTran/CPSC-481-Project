@@ -5,7 +5,8 @@
     <a href="#" class="nav-header"><h2 style="margin: 0;">Hawkins Public Library</h2></a>
     <div></div>
     <a href="recommendations"><i class="bi bi-hand-thumbs-up-fill nav-icon"></i></a>
-    <a href="basket"><i class="bi bi-basket2-fill nav-icon"/></a>
+    <a href="basket" @onclick="updateNotification"><i class="bi bi-basket2-fill nav-icon" /></a>
+    <div class="notification" id="notificationBasket1"></div>
     <a href="help"><i class="bi bi-question-circle nav-icon"/></a>
     <a href="sign-up"><button>Sign Up</button></a>
     <button @onclick="ShowLogin">Login</button>
@@ -27,7 +28,8 @@
     <a href="#" class="nav-header"><h2 style="margin: 0;">Hawkins Public Library</h2></a>
     <div></div>
     <a href="recommendations"><i class="bi bi-hand-thumbs-up-fill nav-icon"></i></a>
-    <a href="basket"><i class="bi bi-basket2-fill nav-icon" /></a>
+    <a href="basket" @onclick="updateNotification"><i class="bi bi-basket2-fill nav-icon" /></a>
+    <div class="notification" id="notificationBasket2"></div>
     <a href="items"><i class="bi bi-book-half nav-icon"></i></a>
     <a href="help"><i class="bi bi-question-circle nav-icon" /></a>
     <i @onclick="ShowAccountInfo" class="bi bi-person-circle nav-icon"></i>
@@ -105,5 +107,10 @@
     {
         loginSuccessful = "none";
         logoutSuccessful = "none";
+    }
+
+    private void updateNotification()
+    {
+        JsRuntime.InvokeVoidAsync("updateNotification");
     }
 }
