@@ -1,12 +1,21 @@
 ﻿@page "/"
+@inject NavigationManager NavigationManager
 
 <div class="homepage-container">
 	<div class="homepage-left-side">
 		<div/>
 		<div>
 			<h1 class="homepage-title">What are you<br />looking for?</h1>
-			<input type="text" class="homepage-searchbar" placeholder="Enter title/author/genre..." />
+			<input type="text" @bind="@searchValue" @oninput="OnInputEvent" class="homepage-searchbar" placeholder="Enter title/author/genre..." />
+			<span class="search-icon">
+				<button class="search-button" @onclick="navigateToSearch">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+						<path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+					</svg>
+				</button>
+			</span>
 			<a href="quiz" class="quiz-prompt"><p>Click here to take a personalized suggestions quiz!</p></a>
+			<a href="catalog" class="quiz-prompt"><p>Click here to browse the library catalog</p></a>
 		</div>
 		<div />
 	</div>
@@ -19,5 +28,22 @@
 </div>
 
 @code {
-	//<input type="text" class="homepageSearchbar" />
+	private string searchValue = "";
+
+	private void OnInputEvent(ChangeEventArgs changeEvent)
+	{
+		searchValue = (string)changeEvent.Value;
+	}
+
+	private void navigateToSearch()
+	{
+		if (searchValue.ToLower().Contains("the fault"))
+		{
+			NavigationManager.NavigateTo("search");
+		}
+		else
+		{
+			NavigationManager.NavigateTo("notFound");
+		}
+	}
 }

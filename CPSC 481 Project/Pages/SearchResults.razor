@@ -2,7 +2,7 @@
 
 <div class="main-grid-container">
     <div class="left-panel">
-        <h4>Search <span class="search-total">22</span> results for</h4>
+        <h4>Search <span class="search-total">3</span> results for</h4>
         <div class="filters">
             <div class="filter-container">
                 <h5 class="filter-title">Genre</h5>
@@ -10,23 +10,23 @@
                 <div class="filter-options">
                     <div class="filter-checkbox-container">
                         <input type="checkbox" class="checkbox-input" id="romance" name="romance" value="romance">
-                        <label for="romance">Romance (22)</label>
+                        <label for="romance">Romance (3)</label>
                     </div>
                     <div class="filter-checkbox-container">
                         <input type="checkbox" class="checkbox-input" id="youngAdult" name="youngAdult" value="youngAdult">
-                        <label for="youngAdult">Young Adult (22)</label>
+                        <label for="youngAdult">Young Adult (3)</label>
                     </div>
                     <div class="filter-checkbox-container">
                         <input type="checkbox" class="checkbox-input" id="fiction" name="fiction" value="fiction">
-                        <label for="fiction">Fiction (22)</label>
+                        <label for="fiction">Fiction (3)</label>
                     </div>
                     <div class="filter-checkbox-container">
                         <input type="checkbox" class="checkbox-input" id="comingOfAge" name="comingOfAge" value="comingOfAge">
-                        <label for="comingOfAge">Coming of Age (22)</label>
+                        <label for="comingOfAge">Coming of Age (3)</label>
                     </div>
                     <div class="filter-checkbox-container">
                         <input type="checkbox" class="checkbox-input" id="contemporary" name="contemporary" value="contemporary">
-                        <label for="contemporary">Contemporary (22)</label>
+                        <label for="contemporary">Contemporary (3)</label>
                     </div>
                 </div>
                 <button class="small-button">Show More</button>
@@ -36,16 +36,16 @@
                 <input class="filter-search" placeholder="Enter media type" />
                 <div class="filter-options">
                     <div class="filter-checkbox-container">
-                        <input type="checkbox" class="checkbox-input" id="book" name="book" value="book">
-                        <label for="book">Book (11)</label>
+                        <input type="checkbox" class="checkbox-input" id="book" name="book" value="book" @oninput="bookCheckboxChanged">
+                        <label for="book">Book (1)</label>
                     </div>
                     <div class="filter-checkbox-container">
                         <input type="checkbox" class="checkbox-input" id="movie" name="movie" value="movie">
-                        <label for="movie">Movie (5)</label>
+                        <label for="movie">Movie (1)</label>
                     </div>
                     <div class="filter-checkbox-container">
                         <input type="checkbox" class="checkbox-input" id="audiobook" name="audiobook" value="audiobook">
-                        <label for="audiobook">Audiobook (6)</label>
+                        <label for="audiobook">Audiobook (1)</label>
                     </div>
                 </div>
             </div>
@@ -54,11 +54,11 @@
                 <div class="filter-options">
                 <div class="filter-checkbox-container">
                     <input type="checkbox" class="checkbox-input" id="addToBasket" name="addToBasket" value="addToBasket">
-                    <label for="addToBasket">Add to Basket (14)</label>
+                    <label for="addToBasket">Add to Basket (2)</label>
                     </div>
                     <div class="filter-checkbox-container">
                         <input type="checkbox" class="checkbox-input" id="hold" name="hold" value="hold">
-                        <label for="hold">Hold Item (8)</label>
+                        <label for="hold">Hold Item (1)</label>
                     </div>
                 </div>
             </div>
@@ -86,7 +86,7 @@
             </div>
         </div>
         <div class="results-container">
-            <div class="item-container">
+            <div class="item-container" style="@displayBookMedia">
                 <div class="item">
                     <img src="/Images/the-fault-in-our-stars-book.png" />
                 </div>
@@ -103,13 +103,13 @@
                         <p>Despite the tumor-shrinking medical miracle that has bought her a few years, Hazel has never been anything but terminal, her final chapter inscribed upon diagnosis. But when a gorgeous plot twist named Augustus Waters suddenly appears at Cancer Kid Support Group, Hazel's story is about to be completely rewritten.</p>
                     </div>
                     <div class="item-footer">
-                        <button class="small-button">Read More</button>
+                        <a href="/item/the-fault-in-our-stars-book"><button class="small-button">Read More</button></a>
                         <h5>Available Copies: 3</h5>
                     </div>
                 </div>
             </div>
-            <hr />
-            <div class="item-container">
+            <hr style="@displayBookMedia" />
+            <div class="item-container" style="@displayMovieMedia">
                 <div class="item">
                     <img src="/Images/the-fault-in-our-stars-movie.png" />
                 </div>
@@ -131,8 +131,8 @@
                     </div>
                 </div>
             </div>
-            <hr />
-            <div class="item-container">
+            <hr style="@displayMovieMedia" />
+            <div class="item-container" style="@displayAudiobookMedia">
                 <div class="item">
                     <img src="/Images/the-fault-in-our-stars-book.png" />
                 </div>
@@ -155,7 +155,7 @@
                 </div>
             </div>
         </div>
-        <div class="page-container">
+        <div class="page-container" style="display: none;">
             <button class="page-button"><i class="bi bi-arrow-left"></i></button>
             <select class="page-select">
                 <option value="1">1</option>
@@ -165,3 +165,24 @@
         </div>
     </div>
 </div>
+
+@code {
+    private string displayBookMedia = "";
+    private string displayMovieMedia = "";
+    private string displayAudiobookMedia = "";
+
+    private void bookCheckboxChanged(ChangeEventArgs e)
+    {
+        if ((bool)e.Value == true)
+        {
+            displayMovieMedia = "display: none;";
+            displayAudiobookMedia = "display: none;";
+        }
+        else
+        {
+            displayBookMedia = "";
+            displayMovieMedia = "";
+            displayAudiobookMedia = "";
+        }
+    }
+}
