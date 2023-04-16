@@ -1,6 +1,6 @@
 ﻿@page "/sign-up"
-
 @inject NavigationManager NavManager
+@inject IJSRuntime JsRuntime
 
 <div class="sign-up-container">
 	<BackButton/>
@@ -38,6 +38,7 @@
 	private string ReenteredPassword { get; set; } = "";
 	private void GetBack()
 	{
+		JsRuntime.InvokeVoidAsync("updateLogin");
 		NavManager.NavigateTo("/");
 
 		if (
