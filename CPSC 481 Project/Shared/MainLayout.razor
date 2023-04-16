@@ -3,7 +3,7 @@
 <PageTitle>Hawkins Public Library</PageTitle>
 
 <div class="page-container">
-    <CascadingValue Value="@userStatus">
+    <CascadingValue Value="@loggedIn" Name="loggedIn">
     <Navbar />
     <div class="body-container">
         @Body
@@ -12,5 +12,13 @@
 </div>
 
 @code {
-    private bool userStatus = false;
+    private bool loggedIn = false;
+
+    private void setLoggedIn(bool status)
+    {
+        Console.WriteLine("main layout func");
+        loggedIn = status;
+        StateHasChanged();
+        Console.WriteLine(loggedIn);
+    }
 }

@@ -1,4 +1,6 @@
-﻿@page "/basket"
+@page "/basket"
+@inject NavigationManager NavigationManager
+@inject IJSRuntime JsRuntime
 
 <div class="outer-checkout-summary-container">
 	<BackButton />
@@ -44,32 +46,34 @@
 			</table>
 
 			<div class="checkout">
-				<h4 class="total-items">Total Items: <b>4</b></h4>
+				<h4 class="total-items">Total Items: <b>2</b></h4>
 				<button class="checkout-button" href="#" @onclick="Request">Checkout</button>
 			</div>
 
-			<div class="action-successful" style="display:@actionSuccessful">
+			<div class="action-successful" id="actionSuccessful" style="display: @actionSuccessful;">
 				<div class="message">
 					<h3 class="text">You must have an account to continue checking out items!</h3>
 					<h5 class="text">Please login or sign-up if you do not have an account</h5>
 					<button class="close-button" @onclick="CloseSuccessStatus">Close</button>
 				</div>
 			</div>
-
 		</div>
 	</div>
 </div>
 
 @code {
 	string actionSuccessful = "none";
+	[CascadingParameter]
+	protected bool? loggedIn { get; set; }
+	
 
 	private void Request()
 	{
-		actionSuccessful = "flex";
+		JsRuntime.InvokeVoidAsync("updateOrderMessage");
 	}
 
 	private void CloseSuccessStatus()
 	{
-		actionSuccessful = "none";
+		JsRuntime.InvokeVoidAsync("hideOrderMessage");
 	}
 }
