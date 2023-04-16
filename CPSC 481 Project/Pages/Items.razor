@@ -5,44 +5,68 @@
 @if (isBorrowedItems)
 {
 	<div class="outer-container">
-		<div class="tab-container">
-			<div class="tab" @onclick='() => {SwitchTab("borrowed");}'>
-				<h3 class="tab-text">Borrowed Items</h3>
+		<div/>
+		<div class="items-content-container">
+			<div class="tab-container">
+				<div class="tab" @onclick='() => {SwitchTab("borrowed");}'>
+					<h3 class="tab-text">Borrowed Items</h3>
+				</div>
+				<div class="disabled-tab" @onclick='() => {SwitchTab("held");}'>
+					<h3 class="tab-text">Held Items</h3>
+				</div>
 			</div>
-			<div class="disabled-tab" @onclick='() => {SwitchTab("held");}'>
-				<h3 class="tab-text">Held Items</h3>
+			<div class="content-container">
+				<h2 style="margin: 0">Ender's Game</h2>
+				<h5>Gavin Hood</h5>
+				<div class="item-subinfo">
+					<h4>Due In: <b style="@(isRenewed1 ? "" : "color: #ff3f3f;")">@(isRenewed1 ? "9 Days" : "2 Days")</b></h4>
+					<button class="@(isRenewed1 ? "renewed-button" : "")" @onclick=RenewBook1 disabled="@isRenewed1">@(isRenewed1 ? "Renewed" : "Renew")</button>
+				</div>
+				<hr />
+				<h2 style="margin: 0">The Fault in Our Stars</h2>
+				<h5>John Green</h5>
+				<div class="item-subinfo">
+					<h4>Due In: <b>10 Days</b></h4>
+					<button class="@(isRenewed2 ? "renewed-button" : "")" @onclick=RenewBook2 disabled="@isRenewed2">@(isRenewed2 ? "Renewed" : "Renew")</button>
+				</div>
 			</div>
 		</div>
-		<div class="content-container">
-			<h2 style="margin: 0">The Martian</h2>
-			<h5>Mike Weir</h5>
-			<div class="item-subinfo">
-				<h4>Due In: <b style="color: #ff3f3f;">2 Days</b></h4>
-				<button class="@(isRenewed1 ? "renewed-button" : "")" @onclick=RenewBook1 disabled="@isRenewed1">@(isRenewed1 ? "Renewed" : "Renew")</button>
-			</div>
-			<hr />
-			<h2 style="margin: 0">The Return of the King</h2>
-			<h5>J.R.R Tolkien</h5>
-			<div class="item-subinfo">
-				<h4>Due In: <b>10 Days</b></h4>
-				<button class="@(isRenewed2 ? "renewed-button" : "")" @onclick=RenewBook2 disabled="@isRenewed2">@(isRenewed2 ? "Renewed" : "Renew")</button>
-			</div>
+		<div class="@(isRenewed1 ? "borrowed-warning-container-on" : "borrowed-warning-container-off")">
+			<h5 style="margin: 0;">Please be advised that once you renew an item, <b>it will only be renewed once.</b> When the new due date arrives, you will be required to return the item promptly or you may be subject to late fees or penalties.</h5>
 		</div>
 	</div>
 }
 else
 {
 	<div class="outer-container">
-		<div class="tab-container">
-			<div class="disabled-tab" @onclick='() => {SwitchTab("borrowed");}'>
-				<h3 class="tab-text">Borrowed Items</h3>
+		<div/>
+		<div class="items-content-container">
+			<div class="tab-container">
+				<div class="disabled-tab" @onclick='() => {SwitchTab("borrowed");}'>
+					<h3 class="tab-text">Borrowed Items</h3>
+				</div>
+				<div class="tab" @onclick='() => {SwitchTab("held");}'>
+					<h3 class="tab-text">Held Items</h3>
+				</div>
 			</div>
-			<div class="tab" @onclick='() => {SwitchTab("held");}'>
-				<h3 class="tab-text">Held Items</h3>
+			<div class="content-container">
+				<h2 style="margin: 0">The Martian</h2>
+				<h5>Mike Weir</h5>
+				<div class="item-subinfo">
+					<h4>Place: <b style="color: #87B54F;">1</b></h4>
+					<button>Remove</button>
+				</div>
+				<hr />
+				<h2 style="margin: 0">The Return of the King</h2>
+				<h5>J.R.R Tolkien</h5>
+				<div class="item-subinfo">
+					<h4>Place: <b>10</b></h4>
+					<button>Remove</button>
+				</div>
 			</div>
 		</div>
-		<div class="content-container" style="display: flex; justify-content: center; align-items: center;">
-			<h3 style="margin: 0;">Nothing here!</h3>
+		<div class="borrowed-warning-container-off">
+			<h5 style="margin: 0;">Please be advised that once you renew an item, <b>it will only be renewed once.</b> When the new due date arrives, you will be required to return the item promptly or you may be subject to late fees or penalties.</h5>
 		</div>
 	</div>
 }
