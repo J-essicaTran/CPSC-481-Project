@@ -6,10 +6,10 @@
 #spanText {
     visibility: hidden;
     position: absolute;
-    width: 120px;
+    width: 130px;
     left: 50%;
     margin-top: 3em;
-    margin-left: -60px;
+    margin-left: -110px;
     background-color: #363636;
     color: #fff;
     text-align: center;
@@ -23,7 +23,7 @@
     position: absolute;
     bottom: 100%;
     left: 50%;
-    margin-left: -5px;
+    margin-left: 40px;
     border-width: 5px;
     border-style: solid;
     border-color: transparent transparent #555 transparent;
