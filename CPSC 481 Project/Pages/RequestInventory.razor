@@ -1,25 +1,26 @@
 @page "/requestInventory"
-
-<div class="top-part">
-    <BackButton/>
-    <div class="top-bar">
-        <i class="bi bi-book" style="color:#d3c2ae;font-size:50px;margin: 0 10px 0 20px;"></i>
-        <p style="font-size: 40px;margin: 5px 0 0 0;">Request Inventory</p>
-    </div>
-</div>
-<div class="bottom-part">
-    <div class="content">
-        <p style="font-size: 30px;margin:0;">Enter Title of the Item You're Requesting</p>
-        <input type="text" class="homepage-searchbar" placeholder="Enter Title of Item..." @bind="submit" />
-        <p style="font-size: 14px;margin:0;">*The Library <i><u>does not</u></i> guarantee that the requested item will be added to the inventory.</p>
-        <br>
-        <button style="padding: 0 30px 0 30px;" href="#" @onclick="Request">Submit</button>
-    </div>
-    <div class="request-successful" style="display:@requestSuccessful">
-        <p class="request-status">Successfully Requested</p>
-        <svg @onclick="CloseSuccessStatus" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
-            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
-        </svg>
+<div class="outer-container">
+    <BackButton />
+    <div class="inner-container">
+        <div class="top-part">
+            <i class="bi bi-book book-icon" />
+            <h1 class="page-title">Request Inventory</h1>
+        </div>
+        <div class="bottom-part">
+            <div class="content">
+                <p style="font-size: 30px;margin:0;">Enter Title of the Item You're Requesting</p>
+                <input type="text" class="homepage-searchbar" placeholder="Enter Title of Item..." @bind="submit" />
+                <p style="font-size: 14px;margin:0;">*The Library <i><u>does not</u></i> guarantee that the requested item will be added to the inventory.</p>
+                <br>
+                <button style="padding: 0 30px 0 30px;" href="#" @onclick="Request">Submit</button>
+            </div>
+            <div class="request-successful" style="display:@requestSuccessful">
+                <p class="request-status">Successfully Requested</p>
+                <svg @onclick="CloseSuccessStatus" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                    <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+                </svg>
+            </div>
+        </div>
     </div>
 </div>
 
