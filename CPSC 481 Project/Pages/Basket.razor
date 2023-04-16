@@ -11,9 +11,11 @@
 		</div>
 
 		<div class="checkout-summary">
+
 			<table style="width: 100%">
 				<tr style="border-bottom: 1px solid #ddd">
 					<th>
+						<div class="item-catagory"><h2>Borrow</h2></div>
 						<div class="item-container">
 							<div class="item-image">
 								<img class="image" src="/Images/enders-game.jpg" />
@@ -43,10 +45,27 @@
 						</div>
 					</th>
 				</tr>
+
+				<tr style="border-bottom: 1px solid #ddd">
+					<th>
+						<div class="item-catagory"><h2>Hold</h2></div>
+						<div class="item-container">
+							<div class="item-image">
+								<img class="image" src="/Images/the-martian-movie.jpg" />
+							</div>
+							<div class="item-info">
+								<h3 class="item-title">The Martian</h3>
+								<h5 class="item-author">Ridley Scott</h5>
+								<h6>Movie (142 minutes, 4K) | Sci-fi</h6>
+							</div>
+							<button class="small-button remove-button">Remove</button>
+						</div>
+					</th>
+				</tr>
 			</table>
 
 			<div class="checkout">
-				<h4 class="total-items">Total Items: <b>2</b></h4>
+				<h4 class="total-items">Total Items: <b>3</b></h4>
 				<button class="checkout-button" href="#" @onclick="Request">Checkout</button>
 			</div>
 
