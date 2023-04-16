@@ -5,7 +5,8 @@
     <a href="#" class="nav-header"><h2 style="margin: 0;">Hawkins Public Library</h2></a>
     <div></div>
     <a href="recommendations"><CPSC_481_Project.Pages.Tooltip Text="<b>Recommendations</b>"><i class="bi bi-hand-thumbs-up-fill nav-icon"></i></CPSC_481_Project.Pages.Tooltip></a>
-    <a href="basket"><CPSC_481_Project.Pages.Tooltip Text="<b>Basket</b>"><i class="bi bi-basket2-fill nav-icon"/></CPSC_481_Project.Pages.Tooltip></a>
+    <a href="basket" @onclick="updateNotification"><CPSC_481_Project.Pages.Tooltip Text="<b>Basket</b>"><i class="bi bi-basket2-fill nav-icon"/></CPSC_481_Project.Pages.Tooltip></a>
+    <div class="notification" id="notificationBasket1"></div>
     <a href="help"><CPSC_481_Project.Pages.Tooltip Text="<b>Help</b>"><i class="bi bi-question-circle nav-icon"/></CPSC_481_Project.Pages.Tooltip></a>
     <a href="sign-up"><button>Sign Up</button></a>
     <button @onclick="ShowLogin">Login</button>
@@ -27,7 +28,8 @@
     <a href="#" class="nav-header"><h2 style="margin: 0;">Hawkins Public Library</h2></a>
     <div></div>
     <a href="recommendations"><CPSC_481_Project.Pages.Tooltip Text="<b>Recommendations</b>"><i class="bi bi-hand-thumbs-up-fill nav-icon"></i></CPSC_481_Project.Pages.Tooltip></a>
-    <a href="basket"><CPSC_481_Project.Pages.Tooltip Text="<b>Basket</b>"><i class="bi bi-basket2-fill nav-icon" /></CPSC_481_Project.Pages.Tooltip></a>
+    <a href="basket" @onclick="updateNotification"><CPSC_481_Project.Pages.Tooltip Text="<b>Basket</b>"><i class="bi bi-basket2-fill nav-icon" /></CPSC_481_Project.Pages.Tooltip></a>
+    <div class="notification" id="notificationBasket2"></div>
     <a href="items"><CPSC_481_Project.Pages.Tooltip Text="<b>Borrowed and Held Items</b>"><i class="bi bi-book-half nav-icon"></i></CPSC_481_Project.Pages.Tooltip></a>
     <a href="help"><CPSC_481_Project.Pages.Tooltip Text="<b>Help</b>"><i class="bi bi-question-circle nav-icon" /></CPSC_481_Project.Pages.Tooltip></a>
     <CPSC_481_Project.Pages.Tooltip Text="<b>Account</b>"><i @onclick="ShowAccountInfo" class="bi bi-person-circle nav-icon"></i></CPSC_481_Project.Pages.Tooltip>
@@ -119,6 +121,11 @@
         logoutSuccessful = "none";
     }
 
+    private void updateNotification()
+    {
+        JsRuntime.InvokeVoidAsync("hideNotification");
+    }
+        
     private void CloseSignUpStatus()
     {
         JsRuntime.InvokeVoidAsync("updateSignUpStatus");

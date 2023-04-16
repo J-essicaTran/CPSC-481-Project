@@ -1,4 +1,5 @@
 ﻿@page "/quiz-results"
+@inject IJSRuntime JsRuntime
 
 <div class="quiz-results-containter">
 
@@ -156,7 +157,6 @@
             </th>
         </tr>
     </table>
-
 </div>
 
 @code {
@@ -167,5 +167,6 @@
     {
         isAdded = true;
         addButton = "Added ✓";
+        JsRuntime.InvokeVoidAsync("updateNotification");
     }
 }
