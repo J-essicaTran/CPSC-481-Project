@@ -27,13 +27,13 @@
     <div></div>
     <a href="recommendations"><i class="bi bi-hand-thumbs-up-fill nav-icon"></i></a>
     <a href="basket"><i class="bi bi-basket2-fill nav-icon" /></a>
-    <a href="borrowed"><i class="bi bi-book-half nav-icon"></i></a>
+    <a href="items"><i class="bi bi-book-half nav-icon"></i></a>
     <a href="help"><i class="bi bi-question-circle nav-icon" /></a>
     <i @onclick="ShowAccountInfo" class="bi bi-person-circle nav-icon"></i>
     <div class="account-info-popup" style="display:@accountInfoDisplay">
-        <a href="account"><p>Account Info.</p></a>
+        <a href="account"><p @onclick="ShowAccountInfo">Account Info.</p></a>
         <hr />
-        <p @onclick="Logout">Logout</p>
+        <a href="#"><p @onclick="Logout">Logout</p></a>
     </div>
     <div class="triangle-border-account" style="display:@accountInfoDisplay"></div>
     <div class="triangle-account" style="display:@accountInfoDisplay"></div>
@@ -52,6 +52,8 @@
     string loggedOutNavBar = "grid";
     string accountInfoDisplay = "none";
     string logoutSuccessful = "none";
+    [CascadingParameter]
+    protected bool? loggedIn { get; set; }
 
     private void ShowLogin()
     {
@@ -83,6 +85,7 @@
         loginSuccessful = "flex";
         loggedInNavBar = "grid";
         loggedOutNavBar = "none";
+        loggedIn = true;
     }
 
     private void Logout()
@@ -91,7 +94,7 @@
         logoutSuccessful = "flex";
         loggedInNavBar = "none";
         loggedOutNavBar = "grid";
-
+        loggedIn = false;
     }
 
     private void CloseSuccessStatus()
