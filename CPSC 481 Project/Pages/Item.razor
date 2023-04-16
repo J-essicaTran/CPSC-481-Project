@@ -15,8 +15,8 @@
                 <div class="book-content">
                     <div class="top-part">
                         <div/>
-                        <h3 style="margin:auto 0;">Copies: 3, Available: 0, Hold: 1</h3>
-                        <button style="margin:auto 0;">Hold</button>
+                        <h3 style="margin:auto 0;">Copies: 3, Available: 3, Hold: 0</h3>
+                        <button style="margin:auto 0;" class="@(isAdded ? "added-button" : "")" @onclick="adding">@addButton</button>
                     </div>
                     <br>
                     <hr style="margin: 0 20px 0 375px;color:#d3c2ae;height:2px;">
@@ -46,19 +46,19 @@
             <h3>Readers <i>also</i> enjoyed</h3>
             <div class="books-container">
                 <div class="book-basket">
-                    <button class="add-to-basket" style="padding:0 10px 0 10px;">Add to basket</button>
+                    <button class="add-to-basket" style="padding:0 10px 0 10px;">Add To Basket</button>
                     <img class="displayed-item" src="/Images/me-before-you.jpeg" />
                     <p class="title">Me Before You</p>
                     <p class="author">Jojo Mayes</p>
                 </div>
                 <div class="book-basket">
-                    <button class="add-to-basket" style="padding:0 10px 0 10px;">Add to basket</button>
+                    <button class="add-to-basket" style="padding:0 10px 0 10px;">Add To Basket</button>
                     <img class="displayed-item" src="/Images/eleanor-park.jpeg" />
                     <p class="title">Eleanor & Park</p>
                     <p class="author">Rainbow Rowell</p>
                 </div>
                 <div class="book-basket">
-                    <button class="add-to-basket" style="padding:0 10px 0 10px;">Add to basket</button>
+                    <button class="add-to-basket" style="padding:0 10px 0 10px;">Add To Basket</button>
                     <img class="displayed-item" src="/Images/twilight.jpeg" />
                     <p class="title">Twilight</p>
                     <p class="author">Stephanie Meyer</p>
@@ -73,4 +73,13 @@
 
     [Parameter]  
     public string item_name { get; set; } 
+
+    private string addButton = "Add To Basket";
+    private bool isAdded = false;
+
+    private void adding()
+    {
+        isAdded = true;
+        addButton = "Added ✓";
+    }
 }
