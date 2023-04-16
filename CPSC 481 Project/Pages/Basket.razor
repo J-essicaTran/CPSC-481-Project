@@ -14,12 +14,12 @@
 					<th>
 						<div class="item-container">
 							<div class="item-image">
-								<img class="image" src="/Images/heartstopper-vol-1.jpg" />
+								<img class="image" src="/Images/enders-game.jpg" />
 							</div>
 							<div class="item-info">
-								<h3 class="item-title">Heartstopper (Vol. 1)</h3>
-								<h5 class="item-author">Alice Oseman</h5>
-								<h6>Graphic Novel (288 pages, Paperback)</h6>
+								<h3 class="item-title">Ender's Game</h3>
+								<h5 class="item-author">Orson Scott Card</h5>
+								<h6>Movie (144 minutes, 4K) | Sci-fi</h6>
 							</div>
 							<button class="small-button remove-button">Remove</button>
 						</div>
@@ -30,44 +30,12 @@
 					<th>
 						<div class="item-container">
 							<div class="item-image">
-								<img class="image" src="/Images/heartstopper-vol-2.jpg"/>
+								<img class="image" src="/Images/the-fault-in-our-stars-book.png"/>
 							</div>
 							<div class="item-info">
-								<h3 class="item-title">Heartstopper (Vol. 2)</h3>
-								<h5 class="item-author">Alice Oseman</h5>
-								<h6>Graphic Novel (320 pages, Paperback)</h6>
-							</div>
-							<button class="small-button remove-button">Remove</button>
-						</div>
-					</th>
-				</tr>
-
-				<tr style="border-bottom: 1px solid #ddd">
-					<th>
-						<div class="item-container">
-							<div class="item-image">
-								<img class="image" src="/Images/heartstopper-vol-3.jpg"/>
-							</div>
-							<div class="item-info">
-								<h3 class="item-title">Heartstopper (Vol. 3)</h3>
-								<h5 class="item-author">Alice Oseman</h5>
-								<h6>Graphic Novel (384 pages, Paperback)</h6>
-							</div>
-							<button class="small-button remove-button">Remove</button>
-						</div>
-					</th>
-				</tr>
-
-				<tr style="border-bottom: 1px solid #ddd">
-					<th>
-						<div class="item-container">
-							<div class="item-image">
-								<img class="image" src="/Images/heartstopper-vol-4.jpg"/>
-							</div>
-							<div class="item-info">
-								<h3 class="item-title">Heartstopper (Vol. 4)</h3>
-								<h5 class="item-author">Alice Oseman</h5>
-								<h6>Graphic Novel (384 pages, Paperback)</h6>
+								<h3 class="item-title">The Fault in Our Stars</h3>
+								<h5 class="item-author">John Green</h5>
+								<h6>Book (313 pages, Hardcover) | Fiction, Romance</h6>
 							</div>
 							<button class="small-button remove-button">Remove</button>
 						</div>
@@ -77,8 +45,31 @@
 
 			<div class="checkout">
 				<h4 class="total-items">Total Items: <b>4</b></h4>
-				<a href="order-summary" class="checkout-button"><button>Checkout</button></a>
+				<button class="checkout-button" href="#" @onclick="Request">Checkout</button>
 			</div>
+
+			<div class="action-successful" style="display:@actionSuccessful">
+				<div class="message">
+					<h3 class="text">You must have an account to continue checking out items!</h3>
+					<h5 class="text">Please login or sign-up if you do not have an account</h5>
+					<button class="close-button" @onclick="CloseSuccessStatus">Close</button>
+				</div>
+			</div>
+
 		</div>
 	</div>
 </div>
+
+@code {
+	string actionSuccessful = "none";
+
+	private void Request()
+	{
+		actionSuccessful = "flex";
+	}
+
+	private void CloseSuccessStatus()
+	{
+		actionSuccessful = "none";
+	}
+}

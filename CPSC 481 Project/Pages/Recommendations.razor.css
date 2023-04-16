@@ -61,3 +61,8 @@
     grid-template-columns: auto fit-content(100%);
 }
 
+.renewed-button {
+    background-color: #87B54F;
+    border-color: #87B54F;
+}
+
