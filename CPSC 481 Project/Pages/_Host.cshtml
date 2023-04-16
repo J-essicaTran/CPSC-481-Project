@@ -17,6 +17,37 @@
     <link href="css/custom-fonts/kyiv-type-titling/kyiv-type-titling.css" rel="stylesheet" />
     <link rel="stylesheet" href="~/css/lib/bootstrap-icons/bootstrap-icons.css"/>
     <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />
+    <script>
+        function updateOrderMessage() {
+            var message = document.getElementById("actionSuccessful");
+            var loggedInNavbar = document.getElementById("loggedInNavBar");
+
+            if (loggedInNavbar.style.display == "none") {
+                message.style.display = "flex";
+            }
+            else {
+                message.style.display = "none";
+                window.location.href = "/order-summary";
+            }
+        }
+        function hideOrderMessage() {
+            var message = document.getElementById("actionSuccessful");
+            message.style.display = "none";
+        }
+        function updateLogin() {
+            var loggedInNavbar = document.getElementById("loggedInNavBar");
+            var loggedOutNavbar = document.getElementById("loggedOutNavBar");
+
+            if (loggedInNavbar.style.display == "none") {
+                loggedInNavbar.style.display = "grid";
+                loggedOutNavbar.style.display = "none";
+            }
+            else {
+                loggedInNavbar.style.display = "grid";
+                loggedOutNavbar.style.display = "none";
+            }
+        }
+    </script>
 </head>
 <body>
     <component type="typeof(App)" render-mode="ServerPrerendered" />
