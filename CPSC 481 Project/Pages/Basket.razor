@@ -44,9 +44,32 @@
 			</table>
 
 			<div class="checkout">
-				<h4 class="total-items">Total Items: <b>2</b></h4>
-				<a href="order-summary" class="checkout-button"><button>Checkout</button></a>
+				<h4 class="total-items">Total Items: <b>4</b></h4>
+				<button class="checkout-button" href="#" @onclick="Request">Checkout</button>
 			</div>
+
+			<div class="action-successful" style="display:@actionSuccessful">
+				<div class="message">
+					<h3 class="text">You must have an account to continue checking out items!</h3>
+					<h5 class="text">Please login or sign-up if you do not have an account</h5>
+					<button class="close-button" @onclick="CloseSuccessStatus">Close</button>
+				</div>
+			</div>
+
 		</div>
 	</div>
 </div>
+
+@code {
+	string actionSuccessful = "none";
+
+	private void Request()
+	{
+		actionSuccessful = "flex";
+	}
+
+	private void CloseSuccessStatus()
+	{
+		actionSuccessful = "none";
+	}
+}
