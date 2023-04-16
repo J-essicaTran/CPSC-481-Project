@@ -16,22 +16,22 @@
 				</div>
 			</div>
 			<div class="content-container">
-				<h2 style="margin: 0">Ender's Game</h2>
-				<h5>Gavin Hood</h5>
+				<h2 style="margin: 0; color: #ff3f3f;">Ender's Game</h2>
+				<h5 style="color: #ff3f3f;">Gavin Hood</h5>
 				<div class="item-subinfo">
-					<h4>Due In: <b style="@(isRenewed1 ? "" : "color: #ff3f3f;")">@(isRenewed1 ? "9 Days" : "2 Days")</b></h4>
-					<button class="@(isRenewed1 ? "renewed-button" : "")" @onclick=RenewBook1 disabled="@isRenewed1">@(isRenewed1 ? "Renewed" : "Renew")</button>
+					<h4 style="color: #ff3f3f;">Due In: <b>Overdue</b></h4>
+					<button style="background-color: #ffffff; color: #ffffff; border-color: #ffffff" @onclick=RenewBook1 disabled=True>OVERDUE</button>
 				</div>
 				<hr />
-				<h2 style="margin: 0">The Fault in Our Stars</h2>
-				<h5>John Green</h5>
+				<h2 style="margin: 0">Crazy Rich Asians</h2>
+				<h5>Gavin Hood</h5>
 				<div class="item-subinfo">
-					<h4>Due In: <b>10 Days</b></h4>
+					<h4>Due In: <b>@(isRenewed2 ? "9 Days" : "2 Days")</b></h4>
 					<button class="@(isRenewed2 ? "renewed-button" : "")" @onclick=RenewBook2 disabled="@isRenewed2">@(isRenewed2 ? "Renewed" : "Renew")</button>
 				</div>
 			</div>
 		</div>
-		<div class="@(isRenewed1 ? "borrowed-warning-container-on" : "borrowed-warning-container-off")">
+		<div class="@(isRenewed2 ? "borrowed-warning-container-on" : "borrowed-warning-container-off")">
 			<h5 style="margin: 0;">Please be advised that once you renew an item, <b>it will only be renewed once.</b> When the new due date arrives, you will be required to return the item promptly or you may be subject to late fees or penalties.</h5>
 		</div>
 	</div>
@@ -57,12 +57,6 @@ else
 					<button>Remove</button>
 				</div>
 				<hr />
-				<h2 style="margin: 0">The Return of the King</h2>
-				<h5>J.R.R Tolkien</h5>
-				<div class="item-subinfo">
-					<h4>Place: <b>10</b></h4>
-					<button>Remove</button>
-				</div>
 			</div>
 		</div>
 		<div class="borrowed-warning-container-off">
