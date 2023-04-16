@@ -38,7 +38,7 @@
             var loggedInNavbar = document.getElementById("loggedInNavBar");
             var loggedOutNavbar = document.getElementById("loggedOutNavBar");
 
-            if (loggedInNavbar.style.display == "none") {
+            if (loggedInNavbar.style.display == "none" || loggedInNavbar.style.display == "") {
                 loggedInNavbar.style.display = "grid";
                 loggedOutNavbar.style.display = "none";
             }

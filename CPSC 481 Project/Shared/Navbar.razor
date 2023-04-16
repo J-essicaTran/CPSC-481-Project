@@ -98,6 +98,7 @@
         loggedOutNavBar = "grid";
         loggedIn = false;
         JsRuntime.InvokeVoidAsync("updateLogin");
+        NavigationManager.NavigateTo("/");
     }
 
     private void CloseSuccessStatus()
