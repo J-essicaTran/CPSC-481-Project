@@ -1,0 +1,242 @@
+﻿@page "/catalog"
+
+<div class="main-grid-container">
+    <div class="left-panel">
+        <h4>Search results by</h4>
+        <div class="filters">
+            <div class="filter-container">
+                <h5 class="filter-title">Genre</h5>
+                <input class="filter-search" placeholder="Enter genre" />
+                <div class="filter-options">
+                    <div class="filter-checkbox-container">
+                        <input type="checkbox" class="checkbox-input" id="fiction" name="fiction" value="fiction">
+                        <label for="fiction">Fiction</label>
+                    </div>
+                    <div class="filter-checkbox-container">
+                        <input type="checkbox" class="checkbox-input" id="youngAdult" name="youngAdult" value="youngAdult">
+                        <label for="youngAdult">Young Adult</label>
+                    </div>
+                    <div class="filter-checkbox-container">
+                        <input type="checkbox" class="checkbox-input" id="nonFiction" name="nonFiction" value="nonFiction">
+                        <label for="nonFiction">Non-Fiction</label>
+                    </div>
+                    <div class="filter-checkbox-container">
+                        <input type="checkbox" class="checkbox-input" id="mystery" name="mystery" value="mystery">
+                        <label for="mystery">Mystery</label>
+                    </div>
+                    <div class="filter-checkbox-container">
+                        <input type="checkbox" class="checkbox-input" id="thriller" name="thriller" value="thriller">
+                        <label for="thriller">Thriller</label>
+                    </div>
+                </div>
+                <button class="small-button">Show More</button>
+            </div>
+            <div class="filter-container">
+                <h5 class="filter-title">Media</h5>
+                <input class="filter-search" placeholder="Enter media type" />
+                <div class="filter-options">
+                    <div class="filter-checkbox-container">
+                        <input type="checkbox" class="checkbox-input" id="book" name="book" value="book">
+                        <label for="book">Book</label>
+                    </div>
+                    <div class="filter-checkbox-container">
+                        <input type="checkbox" class="checkbox-input" id="movie" name="movie" value="movie">
+                        <label for="movie">Movie</label>
+                    </div>
+                    <div class="filter-checkbox-container">
+                        <input type="checkbox" class="checkbox-input" id="audiobook" name="audiobook" value="audiobook">
+                        <label for="audiobook">Audiobook</label>
+                    </div>
+                </div>
+            </div>
+            <div class="filter-container">
+                <h5 class="filter-title">Availability</h5>
+                <div class="filter-options">
+                    <div class="filter-checkbox-container">
+                        <input type="checkbox" class="checkbox-input" id="addToBasket" name="addToBasket" value="addToBasket">
+                        <label for="addToBasket">Add to Basket</label>
+                    </div>
+                    <div class="filter-checkbox-container">
+                        <input type="checkbox" class="checkbox-input" id="hold" name="hold" value="hold">
+                        <label for="hold">Hold Item</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="right-panel">
+        <div class="search-header">
+            <div class="search-bar-container">
+                <input class="search-bar" placeholder="Enter title/author/genre..." />
+                <span class="search-icon">
+                    <button class="search-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                        </svg>
+                    </button>
+                </span>
+            </div>
+            <div class="sort">
+                <label for="sort" class="sort-label">Sort by</label>
+                <select class="sort-select" id="sort">
+                    <option value="newestAdditions">Newest Additions</option>
+                    <option value="relevance">Relevance</option>
+                    <option value="availableCopies">Available Copies</option>
+                    <option value="mostPopular">Most Popular</option>
+                </select>
+            </div>
+        </div>
+        <div class="results-container">
+            <div class="item-container">
+                <div class="item">
+                    <img src="/Images/the-alchemist.jpg" />
+                </div>
+                <div class="item-info">
+                    <div class="item-header">
+                        <div>
+                            <h3>The Alchemist</h3>
+                            <h5>Paulo Coelho</h5>
+                            <h6>Book (208 pages, Paperback) | Fiction</h6>
+                        </div>
+                        <button>Add to Basket</button>
+                    </div>
+                    <div class="item-description">
+                        <p>Paulo Coelho's masterpiece tells the mystical story of Santiago, an Andalusian shepherd boy who yearns to travel in search of a worldly treasure. His quest will lead him to riches far different—and far more satisfying—than he ever imagined.</p>
+                    </div>
+                    <div class="item-footer">
+                        <button class="small-button">Read More</button>
+                        <h5>Available Copies: 1</h5>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <div class="item-container">
+                <div class="item">
+                    <img src="/Images/world-travel.jpg" />
+                </div>
+                <div class="item-info">
+                    <div class="item-header">
+                        <div>
+                            <h3>World Travel</h3>
+                            <h5>Anthony Bourdain</h5>
+                            <h6>Book (480 pages, Hardcover) | Travel</h6>
+                        </div>
+                        <button>Hold</button>
+                    </div>
+                    <div class="item-description">
+                        <p>Anthony Bourdain saw more of the world than nearly anyone. His travels took him from the hidden pockets of his hometown of New York to a tribal longhouse in Borneo, from cosmopolitan Buenos Aires, Paris, and Shanghai to Tanzania’s utter beauty and the stunning desert solitude of Oman’s Empty Quarter—and many places beyond.</p>
+                    </div>
+                    <div class="item-footer">
+                        <button class="small-button">Read More</button>
+                        <h5>Available Copies: 0</h5>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <div class="item-container">
+                <div class="item">
+                    <img src="/Images/fairy-tale.jpg" />
+                </div>
+                <div class="item-info">
+                    <div class="item-header">
+                        <div>
+                            <h3>Fairy Tale</h3>
+                            <h5>Stephen King</h5>
+                            <h6>Book (608 pages, Paperback) | Fantasy, Thriller</h6>
+                        </div>
+                        <button>Add to Basket</button>
+                    </div>
+                    <div class="item-description">
+                        <p>Legendary storyteller Stephen King goes into the deepest well of his imagination in this spellbinding novel about a seventeen-year-old boy who inherits the keys to a parallel world where good and evil are at war, and the stakes could not be higher—for that world or ours.</p>
+                    </div>
+                    <div class="item-footer">
+                        <button class="small-button">Read More</button>
+                        <h5>Available Copies: 4</h5>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <div class="item-container">
+                <div class="item">
+                    <img src="/Images/dune.jpg" />
+                </div>
+                <div class="item-info">
+                    <div class="item-header">
+                        <div>
+                            <h3>Dune</h3>
+                            <h5>Frank Herbert</h5>
+                            <h6>Book (896 pages, Hardcover) | Science Fiction</h6>
+                        </div>
+                        <button>Add to Basket</button>
+                    </div>
+                    <div class="item-description">
+                        <p>Set on the desert planet Arrakis, Dune is the story of the boy Paul Atreides, heir to a noble family tasked with ruling an inhospitable world where the only thing of value is the “spice” melange, a drug capable of extending life and enhancing consciousness. </p>
+                    </div>
+                    <div class="item-footer">
+                        <button class="small-button">Read More</button>
+                        <h5>Available Copies: 2</h5>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <div class="item-container">
+                <div class="item">
+                    <img src="/Images/the-glass-hotel.jpg" />
+                </div>
+                <div class="item-info">
+                    <div class="item-header">
+                        <div>
+                            <h3>The Glass Hotel</h3>
+                            <h5>Emily St. John Mandel</h5>
+                            <h6>Book (320 pages, Paperback) | Fiction</h6>
+                        </div>
+                        <button>Add to Basket</button>
+                    </div>
+                    <div class="item-description">
+                        <p>Vincent is a bartender at the Hotel Caiette, a five-star glass-and-cedar palace on the northernmost tip of Vancouver Island. The owner of the hotel is New York financier Jonathan Alkaitis. When he passes Vincent his card with a tip, it’s the beginning of their life together. </p>
+                    </div>
+                    <div class="item-footer">
+                        <button class="small-button">Read More</button>
+                        <h5>Available Copies: 7</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-container">
+            <button class="page-button" style="display: none;"><i class="bi bi-arrow-left"></i></button>
+            <select class="page-select">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+            </select>
+            <button class="page-button"><i class="bi bi-arrow-right"></i></button>
+        </div>
+    </div>
+</div>

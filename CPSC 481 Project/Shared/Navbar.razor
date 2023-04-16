@@ -1,6 +1,7 @@
 ﻿@inject NavigationManager NavigationManager
+@inject IJSRuntime JsRuntime
 
-<div class="navbar-container" style="display:@loggedOutNavBar">
+<div id="loggedOutNavBar" class="navbar-container">
     <a href="#" class="nav-header"><h2 style="margin: 0;">Hawkins Public Library</h2></a>
     <div></div>
     <a href="recommendations"><CPSC_481_Project.Pages.Tooltip Text="<b>Recommendations</b>"><i class="bi bi-hand-thumbs-up-fill nav-icon"></i></CPSC_481_Project.Pages.Tooltip></a>
@@ -22,7 +23,7 @@
         </svg>
     </div>
 </div>
-<div class="navbar-container" style="display:@loggedInNavBar">
+<div id="loggedInNavBar" class="navbar-container">
     <a href="#" class="nav-header"><h2 style="margin: 0;">Hawkins Public Library</h2></a>
     <div></div>
     <a href="recommendations"><CPSC_481_Project.Pages.Tooltip Text="<b>Recommendations</b>"><i class="bi bi-hand-thumbs-up-fill nav-icon"></i></CPSC_481_Project.Pages.Tooltip></a>
@@ -86,6 +87,7 @@
         loggedInNavBar = "grid";
         loggedOutNavBar = "none";
         loggedIn = true;
+        JsRuntime.InvokeVoidAsync("updateLogin");
     }
 
     private void Logout()
@@ -95,6 +97,8 @@
         loggedInNavBar = "none";
         loggedOutNavBar = "grid";
         loggedIn = false;
+        JsRuntime.InvokeVoidAsync("updateLogin");
+        NavigationManager.NavigateTo("/");
     }
 
     private void CloseSuccessStatus()
@@ -102,24 +106,4 @@
         loginSuccessful = "none";
         logoutSuccessful = "none";
     }
-    //TODO Figure out how to change navbar icon styling when on a page
-    //Ex. when we are on the recommendations page, the recommendations icon is red
-
-    /*
-    string iconStyle;
-    bool temp;
-
-    protected override void OnInitialized()
-    {
-        temp = NavigationManager.Uri.Contains("counter");
-
-        if(NavigationManager.Uri.Contains("/counter"))
-        {
-            iconStyle = "selected-nav-icon";
-        } else
-        {
-            iconStyle = "nav-icon";
-        }
-    }
-    */
 }

@@ -54,3 +54,17 @@
     filter: contrast(120%);
     filter: drop-shadow(-0.25rem 0.5rem 0.5rem #b1b1b1);
 }
+
+.search-icon {
+    float: right;
+    margin-right: 8px;
+    margin-top: -62px;
+    position: relative;
+    z-index: 2;
+}
+
+.search-button {
+    width: fit-content;
+    height: fit-content;
+    padding: 0 0.5em 0.2em 0.5em;
+}
