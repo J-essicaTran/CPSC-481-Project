@@ -33,9 +33,9 @@
                     </div>
 
                     <div class="item-info">
-                        <button class="small-button add-to-basket-button">Add To Basket</button>
+                        <button class="small-button add-to-basket-button @(isAdded ? "added-button" : "")" @onclick="adding">@addButton</button>
                         <h3 class="item-title">Ender's Game</h3>
-                        <h5 class="item-author">Orson Scott Card</h5>
+                        <h5 class="item-author">Gavin Hood</h5>
                         <h6 class="book-details">Movie (144 minutes, 4K) | Sci-fi</h6>
                         <h6>In order to develop a secure defense against a hostile alien race's next attack, government agencies breed child geniuses and train them as soldiers. A brilliant young boy, Andrew "Ender" Wiggin lives with his kind but distant parents, his sadistic brother...</h6>
                         <div class="read-more-button"><div /><button class="small-button">Read More</button></div>
@@ -158,3 +158,14 @@
     </table>
 
 </div>
+
+@code {
+    private string addButton = "Add To Basket";
+    private bool isAdded = false;
+
+    private void adding()
+    {
+        isAdded = true;
+        addButton = "Added ✓";
+    }
+}
