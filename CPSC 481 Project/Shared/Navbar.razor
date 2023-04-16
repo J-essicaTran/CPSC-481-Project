@@ -31,9 +31,9 @@
     <a href="help"><CPSC_481_Project.Pages.Tooltip Text="<b>Help</b>"><i class="bi bi-question-circle nav-icon" /></CPSC_481_Project.Pages.Tooltip></a>
     <CPSC_481_Project.Pages.Tooltip Text="<b>Account</b>"><i @onclick="ShowAccountInfo" class="bi bi-person-circle nav-icon"></i></CPSC_481_Project.Pages.Tooltip>
     <div class="account-info-popup" style="display:@accountInfoDisplay">
-        <a href="account"><p>Account Info.</p></a>
+        <a href="account"><p @onclick="ShowAccountInfo">Account Info.</p></a>
         <hr />
-        <p @onclick="Logout">Logout</p>
+        <a href="#"><p @onclick="Logout">Logout</p></a>
     </div>
     <div class="triangle-border-account" style="display:@accountInfoDisplay"></div>
     <div class="triangle-account" style="display:@accountInfoDisplay"></div>
@@ -52,6 +52,8 @@
     string loggedOutNavBar = "grid";
     string accountInfoDisplay = "none";
     string logoutSuccessful = "none";
+    [CascadingParameter]
+    protected bool? loggedIn { get; set; }
 
     private void ShowLogin()
     {
@@ -83,6 +85,7 @@
         loginSuccessful = "flex";
         loggedInNavBar = "grid";
         loggedOutNavBar = "none";
+        loggedIn = true;
     }
 
     private void Logout()
@@ -91,7 +94,7 @@
         logoutSuccessful = "flex";
         loggedInNavBar = "none";
         loggedOutNavBar = "grid";
-
+        loggedIn = false;
     }
 
     private void CloseSuccessStatus()
