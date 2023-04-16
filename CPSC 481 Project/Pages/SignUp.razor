@@ -38,6 +38,7 @@
 	private string ReenteredPassword { get; set; } = "";
 	private void GetBack()
 	{
+		JsRuntime.InvokeVoidAsync("updateSignUpStatus");
 		JsRuntime.InvokeVoidAsync("updateLogin");
 		NavManager.NavigateTo("/");
 

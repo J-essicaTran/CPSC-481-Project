@@ -192,4 +192,11 @@ hr {
 
 #notificationBasket2 {
     right: 9.9%;
+
+#signUpSuccessful {
+    display: none;
+}
+
+#editSuccessful {
+    display: none;
 }
